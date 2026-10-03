@@ -1,0 +1,379 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cart | RockyDelish</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <link rel="stylesheet" href="cart.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+            Rocky<span>Delish</span>
+        </a>
+
+        <div class="nav-links" id="navLinks">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="products.html">
+                Menu
+            </a>
+
+            <a href="restaurants.html">
+                Restaurants
+            </a>
+
+            <a href="orders.html">
+                Orders
+            </a>
+
+        </div>
+
+        <div class="nav-right">
+
+            <a href="cart.html" class="cart-btn active-cart">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                <span
+                    class="cart-count"
+                    id="cartCount"
+                >
+                    0
+                </span>
+
+            </a>
+
+            <a href="account.html" class="account-btn">
+
+                <i class="fa-solid fa-circle-user"></i>
+
+                <span>
+                    Account
+                </span>
+
+            </a>
+
+            <button
+                class="menu-btn"
+                id="menuBtn"
+                type="button"
+            >
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= CART ================= -->
+
+    <main class="cart-page">
+
+        <div class="cart-heading">
+
+            <span>
+                YOUR ORDER
+            </span>
+
+            <h1>
+                Your Cart
+            </h1>
+
+            <p>
+                Review your selected meals before checking out.
+            </p>
+
+        </div>
+
+
+        <div class="cart-layout">
+
+            <!-- ================= CART ITEMS ================= -->
+
+            <section class="cart-items-section">
+
+                <div class="cart-section-title">
+
+                    <h2>
+                        Your Items
+                    </h2>
+
+                    <span id="itemsCount">
+                        0 items
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="cart-items"
+                    id="cartItems"
+                ></div>
+
+
+                <!-- Empty cart -->
+
+                <div
+                    class="empty-cart"
+                    id="emptyCart"
+                >
+
+                    <div class="empty-cart-icon">
+
+                        <i class="fa-solid fa-cart-shopping"></i>
+
+                    </div>
+
+                    <h2>
+                        Your cart is empty
+                    </h2>
+
+                    <p>
+                        You haven't added any food yet.
+                    </p>
+
+                    <a
+                        href="products.html"
+                        class="browse-btn"
+                    >
+                        Browse Menu
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= ORDER SUMMARY ================= -->
+
+            <aside class="order-summary">
+
+                <h2>
+                    Order Summary
+                </h2>
+
+
+                <div class="summary-row">
+
+                    <span>
+                        Subtotal
+                    </span>
+
+                    <strong id="subtotal">
+                        â‚¦0
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-row">
+
+                    <span>
+                        Delivery Fee
+                    </span>
+
+                    <strong id="deliveryFee">
+                        â‚¦0
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-line"></div>
+
+
+                <div class="summary-total">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <strong id="total">
+                        â‚¦0
+                    </strong>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="checkout-btn"
+                    id="checkoutBtn"
+                >
+                    Proceed to Checkout
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+
+                <a
+                    href="products.html"
+                    class="continue-shopping"
+                >
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Continue Shopping
+                </a>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+
+                <a
+                    href="index.html"
+                    class="footer-logo"
+                >
+                    Rocky<span>Delish</span>
+                </a>
+
+                <p>
+                    Delicious food delivered fast,
+                    fresh and straight to your door.
+                </p>
+
+                <div class="social-links">
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="products.html">
+                    Menu
+                </a>
+
+                <a href="restaurants.html">
+                    Restaurants
+                </a>
+
+                <a href="orders.html">
+                    Orders
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Customer
+                </h3>
+
+                <a href="account.html">
+                    My Account
+                </a>
+
+                <a href="cart.html">
+                    Cart
+                </a>
+
+                <a href="checkout.html">
+                    Checkout
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Contact
+                </h3>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Oyo, Nigeria
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    +234 707 099 2944
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    rockydelish@gmail.com
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 RockyDelish. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="cart.js"></script>
+</body>
+</html>
+
+

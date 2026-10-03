@@ -1,0 +1,570 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout | RockyDelish</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="checkout.css">
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+            Rocky<span>Delish</span>
+        </a>
+
+
+        <div class="nav-links" id="navLinks">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="products.html">
+                Menu
+            </a>
+
+            <a href="restaurants.html">
+                Restaurants
+            </a>
+
+            <a href="orders.html">
+                Orders
+            </a>
+
+        </div>
+
+
+        <div class="nav-right">
+
+            <a href="cart.html" class="cart-btn">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                <span
+                    class="cart-count"
+                    id="cartCount"
+                >
+                    0
+                </span>
+
+            </a>
+
+
+            <a
+                href="account.html"
+                class="account-btn"
+            >
+
+                <i class="fa-solid fa-circle-user"></i>
+
+                <span>
+                    Account
+                </span>
+
+            </a>
+
+
+            <button
+                class="menu-btn"
+                id="menuBtn"
+                type="button"
+            >
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ================= CHECKOUT ================= -->
+
+    <main class="checkout-page">
+
+
+        <!-- Page heading -->
+
+        <div class="checkout-heading">
+
+            <span>
+                COMPLETE YOUR ORDER
+            </span>
+
+            <h1>
+                Checkout
+            </h1>
+
+            <p>
+                Enter your delivery details and confirm your order.
+            </p>
+
+        </div>
+
+
+
+        <div class="checkout-layout">
+
+
+            <!-- ================= DELIVERY FORM ================= -->
+
+            <section class="delivery-section">
+
+                <div class="section-title">
+
+                    <div class="title-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Delivery Information
+                        </h2>
+
+                        <p>
+                            Where should we deliver your food?
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <form id="checkoutForm">
+
+
+                    <!-- Full Name -->
+
+                    <div class="form-group">
+
+                        <label for="fullName">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="fullName"
+                            name="fullName"
+                            placeholder="Enter your full name"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- Phone -->
+
+                    <div class="form-group">
+
+                        <label for="phone">
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="Enter your phone number"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- Address -->
+
+                    <div class="form-group">
+
+                        <label for="address">
+                            Delivery Address
+                        </label>
+
+                        <textarea
+                            id="address"
+                            name="address"
+                            rows="4"
+                            placeholder="Enter your full delivery address"
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+
+                    <!-- City -->
+
+                    <div class="form-group">
+
+                        <label for="city">
+                            City
+                        </label>
+
+                        <input
+                            type="text"
+                            id="city"
+                            name="city"
+                            placeholder="e.g. Lagos"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- Additional Information -->
+
+                    <div class="form-group">
+
+                        <label for="additionalInfo">
+                            Additional Information
+                            <span>(Optional)</span>
+                        </label>
+
+                        <textarea
+                            id="additionalInfo"
+                            name="additionalInfo"
+                            rows="3"
+                            placeholder="Apartment number, landmark, special instructions..."
+                        ></textarea>
+
+                    </div>
+
+
+
+                    <!-- Payment method -->
+
+                    <div class="payment-section">
+
+                        <h3>
+                            Payment Method
+                        </h3>
+
+
+                        <label class="payment-option">
+
+                            <input
+                                type="radio"
+                                name="paymentMethod"
+                                value="cash"
+                                checked
+                            >
+
+                            <span class="custom-radio"></span>
+
+                            <span class="payment-text">
+
+                                <strong>
+                                    Cash on Delivery
+                                </strong>
+
+                                <small>
+                                    Pay when your order arrives.
+                                </small>
+
+                            </span>
+
+                        </label>
+
+
+                        <label class="payment-option">
+
+                            <input
+                                type="radio"
+                                name="paymentMethod"
+                                value="online"
+                            >
+
+                            <span class="custom-radio"></span>
+
+                            <span class="payment-text">
+
+                                <strong>
+                                    Online Payment
+                                </strong>
+
+                                <small>
+                                    Online payment can be connected later.
+                                </small>
+
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+
+                    <button
+                        type="submit"
+                        class="place-order-btn"
+                    >
+
+                        Place Order
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                </form>
+
+            </section>
+
+
+
+            <!-- ================= ORDER SUMMARY ================= -->
+
+            <aside class="checkout-summary">
+
+                <div class="summary-header">
+
+                    <h2>
+                        Your Order
+                    </h2>
+
+                    <a href="cart.html">
+                        Edit Cart
+                    </a>
+
+                </div>
+
+
+                <!-- Items -->
+
+                <div
+                    class="checkout-items"
+                    id="checkoutItems"
+                ></div>
+
+
+
+                <!-- Summary -->
+
+                <div class="summary-details">
+
+
+                    <div class="summary-row">
+
+                        <span>
+                            Subtotal
+                        </span>
+
+                        <strong id="subtotal">
+                            â‚¦0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-row">
+
+                        <span>
+                            Delivery Fee
+                        </span>
+
+                        <strong id="deliveryFee">
+                            â‚¦0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-line"></div>
+
+
+                    <div class="summary-total">
+
+                        <span>
+                            Total
+                        </span>
+
+                        <strong id="total">
+                            â‚¦0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+            </aside>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+
+            <div class="footer-brand">
+
+                <a
+                    href="index.html"
+                    class="footer-logo"
+                >
+                    Rocky<span>Delish</span>
+                </a>
+
+                <p>
+                    Delicious food delivered fast,
+                    fresh and straight to your door.
+                </p>
+
+
+                <div class="social-links">
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="products.html">
+                    Menu
+                </a>
+
+                <a href="restaurants.html">
+                    Restaurants
+                </a>
+
+                <a href="orders.html">
+                    Orders
+                </a>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Customer
+                </h3>
+
+                <a href="account.html">
+                    My Account
+                </a>
+
+                <a href="cart.html">
+                    Cart
+                </a>
+
+                <a href="checkout.html">
+                    Checkout
+                </a>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Contact
+                </h3>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Oyo, Nigeria
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    +234 707 099 2944
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    rockydelish@gmail.com
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 RockyDelish. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- JavaScript -->
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script type="module" src="checkout.js"></script>
+</body>
+
+</html>
+
+

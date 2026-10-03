@@ -1,0 +1,291 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Food Match | RockyDelish</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="food-match.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+            Rocky<span>Delish</span>
+        </a>
+
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="products.html">Menu</a>
+            <a href="restaurants.html" >
+                Restaurants
+            </a>
+            <a href="food-match.html" class="active">Food Match</a>
+            <a href="orders.html">My Orders</a>
+            <a href="favorites.html">
+    <i class="fa-solid fa-heart"></i>
+    Favorites
+</a>
+        </div>
+
+        <div class="nav-right">
+
+            <a href="cart.html" class="cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </a>
+
+        </div>
+
+        <button class="menu-btn" id="menuBtn" type="button">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </nav>
+
+
+    <!-- HERO -->
+    <section class="match-hero">
+
+        <div class="hero-content">
+
+            <span class="small-title">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                ROCKYDELISH FOOD MATCH
+            </span>
+
+            <h1>
+                Not sure what to eat?
+                <span>Let us find your match.</span>
+            </h1>
+
+            <p>
+                Tell us what you're craving and your budget,
+                and we'll find a meal that's perfect for you.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- MATCH AREA -->
+    <main class="match-container">
+
+        <!-- STEP 1 -->
+        <section class="match-step">
+
+            <div class="step-heading">
+                <span>01</span>
+                <div>
+                    <h2>What are you craving?</h2>
+                    <p>Choose the option that best describes you.</p>
+                </div>
+            </div>
+
+            <div class="choice-grid" id="moodChoices">
+
+                <button class="choice-card" data-value="hungry">
+                    <span class="choice-icon">😋</span>
+                    <strong>Very Hungry</strong>
+                    <small>I need something filling</small>
+                </button>
+
+                <button class="choice-card" data-value="light">
+                    <span class="choice-icon">🍃</span>
+                    <strong>Something Light</strong>
+                    <small>Nothing too heavy</small>
+                </button>
+
+                <button class="choice-card" data-value="spicy">
+                    <span class="choice-icon">🌶️</span>
+                    <strong>Something Spicy</strong>
+                    <small>Give me some heat</small>
+                </button>
+
+                <button class="choice-card" data-value="sweet">
+                    <span class="choice-icon">🍰</span>
+                    <strong>Something Sweet</strong>
+                    <small>I'm craving a treat</small>
+                </button>
+
+                <button class="choice-card" data-value="drink">
+                    <span class="choice-icon">🥤</span>
+                    <strong>Just a Drink</strong>
+                    <small>Something refreshing</small>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- STEP 2 -->
+        <section class="match-step">
+
+            <div class="step-heading">
+                <span>02</span>
+                <div>
+                    <h2>What's your budget?</h2>
+                    <p>We'll keep your recommendation within your budget.</p>
+                </div>
+            </div>
+
+            <div class="choice-grid budget-grid" id="budgetChoices">
+
+                <button class="choice-card" data-value="3000">
+                    <span class="choice-icon">
+                        <i class="fa-solid fa-wallet"></i>
+                    </span>
+                    <strong>Under ₦3,000</strong>
+                </button>
+
+                <button class="choice-card" data-value="5000">
+                    <span class="choice-icon">
+                        <i class="fa-solid fa-wallet"></i>
+                    </span>
+                    <strong>₦3,000 – ₦5,000</strong>
+                </button>
+
+                <button class="choice-card" data-value="8000">
+                    <span class="choice-icon">
+                        <i class="fa-solid fa-wallet"></i>
+                    </span>
+                    <strong>₦5,000 – ₦8,000</strong>
+                </button>
+
+                <button class="choice-card" data-value="999999">
+                    <span class="choice-icon">
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                    <strong>No Limit</strong>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- STEP 3 -->
+        <section class="match-step">
+
+            <div class="step-heading">
+                <span>03</span>
+                <div>
+                    <h2>What do you feel like eating?</h2>
+                    <p>Pick a food category.</p>
+                </div>
+            </div>
+
+            <div class="category-grid" id="categoryChoices">
+
+                <button class="category-card" data-value="burger">
+                    <img src="assets/cat1.jpg" alt="Burger">
+                    <span>Burgers</span>
+                </button>
+
+                <button class="category-card" data-value="pizza">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeEj2k99QhgvsDEY_mW9N7cmLPUJsEkHyvPqR4cg4fTw&s=10" alt="Pizza">
+                    <span>Pizza</span>
+                </button>
+
+                <button class="category-card" data-value="chicken">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8qbe-GLf1UM0SqoinENeQ5v4mzb_0G_-2jgi2Na3Sdw&s=10" alt="Chicken">
+                    <span>Chicken</span>
+                </button>
+
+                <button class="category-card" data-value="rice">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfA0hO2I_gqRl32HQp_OoR0_9lKlxLyP4csrQb5xWZtw&s=10" alt="Rice">
+                    <span>Rice</span>
+                </button>
+
+                <button class="category-card" data-value="shawarma">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQpFqTDQKdqr91eKkcYEx5h0-1SXZHElhIpiO0Psp5AA&s=10" alt="Shawarma">
+                    <span>Shawarma</span>
+                </button>
+
+                <button class="category-card" data-value="drinks">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfKnohWE_iFSP3E5iDXUad635MlVu6OM8vPQKk0Y1CoQ&s=10" alt="Drinks">
+                    <span>Drinks</span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- BUTTONS -->
+        <div class="match-actions">
+
+            <button class="find-match-btn" id="findMatchBtn">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                Find My Match
+            </button>
+
+            <button class="surprise-btn" id="surpriseBtn">
+                <i class="fa-solid fa-shuffle"></i>
+                Surprise Me
+            </button>
+
+        </div>
+
+
+        <!-- RESULT -->
+        <section class="match-result" id="matchResult">
+
+            <div class="result-badge">
+                <i class="fa-solid fa-circle-check"></i>
+                YOUR ROCKYDELISH MATCH
+            </div>
+
+            <div class="result-content">
+
+                <div class="result-image">
+                    <img id="resultImage" src="" alt="Recommended food">
+                </div>
+
+                <div class="result-info">
+
+                    <span class="result-category" id="resultCategory">
+                        Food
+                    </span>
+
+                    <h2 id="resultName">
+                        Your perfect meal
+                    </h2>
+
+                    <div class="result-price" id="resultPrice">
+                        ₦0
+                    </div>
+
+                    <p id="resultReason">
+                        Your recommendation will appear here.
+                    </p>
+
+                    <button class="add-result-btn" id="addResultBtn">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script type="module" src="food-match.js"></script>
+
+</body>
+</html>

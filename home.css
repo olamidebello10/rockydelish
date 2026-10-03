@@ -1,0 +1,3281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #ffffff;
+    color: #111827;
+    margin: 0;
+    padding-top: 75px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+.user-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.user-initial {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fc8a06;
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 700;
+    font-size: 16px;
+}
+
+
+.logout-btn {
+    border: none;
+    background: #fff1e6;
+    color: #fc8a06;
+
+    padding: 10px 16px;
+
+    border-radius: 8px;
+
+    font-family: inherit;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.logout-btn:hover {
+    background: #fc8a06;
+    color: #ffffff;
+}
+
+/* ================================================= */
+/* ================= NAVBAR ======================== */
+/* ================================================= */
+
+.navbar {
+    width: 100%;
+    height: 75px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 6%;
+
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ================= LOGO ================= */
+
+.logo {
+    text-decoration: none;
+
+    font-size: 27px;
+    font-weight: 800;
+
+    color: #111827;
+}
+
+.logo span {
+    color: #f97316;
+}
+
+
+/* ================= NAV LINKS ================= */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+
+    gap: 35px;
+}
+
+.nav-links a {
+    text-decoration: none;
+
+    color: #4b5563;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #f97316;
+}
+
+
+/* ================================================= */
+/* ================= RIGHT SIDE ==================== */
+/* ================================================= */
+
+.nav-right {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+/* ================= CART ================= */
+
+.cart-btn {
+    position: relative;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #111827;
+
+    text-decoration: none;
+
+    font-size: 19px;
+
+    transition: 0.3s ease;
+}
+
+.cart-btn:hover {
+    color: #f97316;
+}
+
+
+/* CART COUNT */
+
+.cart-count {
+    position: absolute;
+
+    top: 0;
+    right: -2px;
+
+    width: 17px;
+    height: 17px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f97316;
+
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 9px;
+    font-weight: 700;
+}
+
+
+/* ================================================= */
+/* ================= AUTH =========================== */
+/* ================================================= */
+
+.auth-area {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+.login-link {
+    text-decoration: none;
+
+    color: #111827;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: 0.3s ease;
+}
+
+.login-link:hover {
+    color: #f97316;
+}
+
+
+.signup-btn {
+    text-decoration: none;
+
+    background: #f97316;
+
+    color: white;
+
+    padding: 11px 22px;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.signup-btn:hover {
+    background: #ea580c;
+
+    transform: translateY(-2px);
+}
+
+
+/* ================================================= */
+/* ================= USER =========================== */
+/* ================================================= */
+
+.user-area {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    color: #111827;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.user-area > i {
+    color: #f97316;
+
+    font-size: 21px;
+}
+
+
+.logout-btn {
+    border: none;
+
+    background: #fff1e8;
+
+    color: #f97316;
+
+    padding: 8px 12px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+.hidden {
+    display: none !important;
+}
+
+
+/* ================================================= */
+/* ================= MOBILE MENU =================== */
+/* ================================================= */
+
+.menu-btn {
+    display: none;
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 22px;
+
+    color: #111827;
+
+    cursor: pointer;
+}
+
+
+/* ================================================= */
+/* ================= HERO ========================== */
+/* ================================================= */
+
+.hero {
+    width: 100%;
+
+    min-height: 600px;
+
+    background: #070d24;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+
+.hero-container {
+    width: 90%;
+
+    max-width: 1400px;
+
+    min-height: 600px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* ================================================= */
+/* ================= HERO LEFT ===================== */
+/* ================================================= */
+
+.hero-content {
+    width: 45%;
+
+    padding: 70px 0;
+
+    position: relative;
+
+    z-index: 5;
+
+    animation: heroText 1s ease forwards;
+}
+
+
+.hero-small-text {
+    color: #ffffff;
+
+    font-size: 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 20px;
+
+    opacity: 0.85;
+}
+
+
+.hero-small-text span {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #f97316;
+
+    display: inline-block;
+}
+
+
+/* ================================================= */
+/* ================= HERO TITLE ==================== */
+/* ================================================= */
+
+.hero h1 {
+    color: white;
+
+    font-size: clamp(42px, 5vw, 72px);
+
+    line-height: 1.08;
+
+    font-weight: 700;
+
+    margin-bottom: 25px;
+}
+
+
+.hero h1 strong {
+    display: block;
+
+    color: #f97316;
+
+    font-weight: 700;
+}
+
+
+/* ================================================= */
+/* ================= DESCRIPTION =================== */
+/* ================================================= */
+
+.hero-description {
+    color: #d1d5db;
+
+    max-width: 560px;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    margin-bottom: 32px;
+}
+
+
+/* ================================================= */
+/* ================= SEARCH ======================== */
+/* ================================================= */
+
+.hero-search {
+    width: 100%;
+
+    max-width: 570px;
+
+    height: 62px;
+
+    background: #ffffff;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 7px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+
+    margin-bottom: 25px;
+}
+
+
+.search-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #f97316;
+}
+
+
+.hero-search input {
+    flex: 1;
+
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    color: #374151;
+}
+
+
+.hero-search input::placeholder {
+    color: #9ca3af;
+}
+
+
+.hero-search button {
+    height: 48px;
+
+    border: none;
+
+    padding: 0 28px;
+
+    border-radius: 6px;
+
+    background: #f97316;
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+
+.hero-search button:hover {
+    background: #ea580c;
+
+    transform: translateY(-2px);
+}
+
+
+/* ================================================= */
+/* ================= ORDER BUTTON ================== */
+/* ================================================= */
+
+.order-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    text-decoration: none;
+
+    background: #f97316;
+
+    color: white;
+
+    padding: 14px 25px;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+
+.order-btn:hover {
+    background: #ea580c;
+
+    transform: translateY(-3px);
+}
+
+
+.order-btn i {
+    transition: 0.3s ease;
+}
+
+
+.order-btn:hover i {
+    transform: translateX(5px);
+}
+
+
+/* ================================================= */
+/* ================= IMAGE SIDE ==================== */
+/* ================================================= */
+
+/*
+    THIS IS YOUR ORIGINAL IMAGE SECTION.
+    The image itself is not being replaced or
+    covered by anything.
+*/
+
+.hero-image-area {
+    width: 52%;
+
+    height: 600px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    position: relative;
+
+    animation: heroImage 1.2s ease forwards;
+}
+
+
+.hero-image-wrapper {
+    width: 100%;
+
+    position: relative;
+
+    transform: translateX(5%);
+}
+
+
+.hero-main-image {
+    width: 100%;
+
+    max-width: 890px;
+
+    display: block;
+
+    object-fit: contain;
+
+    /* animation: floatingImage 5s ease-in-out infinite; */
+}
+
+
+/* ================================================= */
+/* ================= ANIMATIONS ==================== */
+/* ================================================= */
+
+@keyframes heroText {
+
+    from {
+        opacity: 0;
+
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateX(0);
+    }
+
+}
+
+
+@keyframes heroImage {
+
+    from {
+        opacity: 0;
+
+        transform: translateX(70px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateX(0);
+    }
+
+}
+
+
+@keyframes floatingImage {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ================================================= */
+/* ================= TABLET ======================== */
+/* ================================================= */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        padding: 0 4%;
+    }
+
+
+    .nav-links {
+        gap: 18px;
+    }
+
+
+    .hero-container {
+        width: 92%;
+    }
+
+
+    .hero-content {
+        width: 48%;
+    }
+
+
+    .hero-image-area {
+        width: 50%;
+    }
+
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+}
+
+
+/* ================================================= */
+/* ================= MOBILE ======================== */
+/* ================================================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        height: 70px;
+
+        padding: 0 4%;
+    }
+
+
+    /* MOBILE NAV */
+
+    .nav-links {
+        position: absolute;
+
+        top: 70px;
+
+        left: 0;
+
+        width: 100%;
+
+        background: #ffffff;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 0;
+
+        padding: 10px 5% 20px;
+
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    }
+
+
+    .nav-links.show {
+        display: flex;
+    }
+
+
+    .nav-links a {
+        width: 100%;
+
+        padding: 14px 0;
+
+        font-size: 14px;
+    }
+
+
+    .nav-right {
+        gap: 10px;
+    }
+
+
+    .cart-btn {
+        width: 35px;
+        height: 35px;
+    }
+
+
+    .login-link {
+        font-size: 13px;
+    }
+
+
+    .signup-btn {
+        padding: 9px 15px;
+
+        font-size: 12px;
+    }
+
+
+    .menu-btn {
+        display: block;
+
+        border: none;
+
+        background: transparent;
+
+        font-size: 22px;
+
+        cursor: pointer;
+    }
+
+
+    /* ================= HERO ================= */
+
+    .hero {
+        min-height: auto;
+    }
+
+
+    .hero-container {
+        min-height: auto;
+
+        width: 92%;
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .hero-content {
+        width: 100%;
+
+        padding: 60px 0 30px;
+    }
+
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+
+    .hero-search {
+        height: 55px;
+    }
+
+
+    .hero-search button {
+        height: 43px;
+
+        padding: 0 17px;
+    }
+
+
+    /* ================= ORIGINAL IMAGE ================= */
+
+    .hero-image-area {
+        width: 100%;
+
+        height: auto;
+
+        justify-content: center;
+    }
+
+
+    .hero-image-wrapper {
+        width: 110%;
+
+        transform: none;
+    }
+
+
+    .hero-main-image {
+        width: 100%;
+    }
+
+}
+
+/* =========================================
+   HERO VISUAL
+========================================= */
+
+.hero-visual {
+    position: relative;
+    width: 100%;
+    height: 520px;
+    overflow: hidden;
+}
+
+
+/* =========================================
+   YELLOW BACKGROUND SHAPE
+========================================= */
+
+.hero-yellow-shape {
+    position: absolute;
+    width: 440px;
+    height: 440px;
+
+    background: #ffd84d;
+
+    border-radius: 50%;
+
+    top: 45px;
+    right: 20px;
+
+    z-index: 1;
+}
+
+
+/* =========================================
+   BIG NUMBERS
+========================================= */
+
+.hero-number {
+    position: absolute;
+
+    font-size: 150px;
+    font-weight: 900;
+
+    line-height: 1;
+
+    color: rgba(255, 255, 255, 0.28);
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+.hero-number-1 {
+    top: 70px;
+    right: 230px;
+}
+
+.hero-number-2 {
+    top: 160px;
+    right: 170px;
+
+    opacity: 0;
+}
+
+.hero-number-3 {
+    top: 250px;
+    right: 100px;
+
+    opacity: 0;
+}
+
+
+/* =========================================
+   LADIES
+========================================= */
+
+.hero-lady {
+    position: absolute;
+
+    object-fit: contain;
+
+    z-index: 4;
+
+    pointer-events: none;
+}
+
+
+/* Back lady */
+
+.hero-lady-back {
+    width: 330px;
+
+    right: 105px;
+    bottom: 0;
+
+    z-index: 3;
+
+    transform: translateX(30px);
+
+    animation: backLadyFloat 5s ease-in-out infinite;
+}
+
+
+/* Front lady */
+
+.hero-lady-front {
+    width: 350px;
+
+    right: 15px;
+    bottom: 0;
+
+    z-index: 5;
+
+    animation: frontLadyFloat 5s ease-in-out infinite;
+}
+
+
+/* =========================================
+   LADY ANIMATION
+========================================= */
+
+@keyframes frontLadyFloat {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes backLadyFloat {
+
+    0% {
+        transform: translateX(30px) translateY(0);
+    }
+
+    50% {
+        transform: translateX(30px) translateY(-5px);
+    }
+
+    100% {
+        transform: translateX(30px) translateY(0);
+    }
+
+}
+
+
+/* =========================================
+   ORDER STATUS CARDS
+========================================= */
+
+.order-status-container {
+    position: absolute;
+
+    right: 0;
+    top: 40px;
+
+    width: 285px;
+    height: 400px;
+
+    z-index: 8;
+
+    pointer-events: none;
+}
+
+
+.order-status-card {
+    position: absolute;
+
+    right: 0;
+
+    width: 270px;
+
+    min-height: 82px;
+
+    padding: 15px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    background: #ffffff;
+
+    border-radius: 12px;
+
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+
+    opacity: 0;
+
+    transform: translateX(35px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+
+.order-status-card.active {
+    opacity: 1;
+
+    transform: translateX(0);
+}
+
+
+/* =========================================
+   CARD POSITIONS
+========================================= */
+
+.status-card-1 {
+    top: 0;
+}
+
+.status-card-2 {
+    top: 105px;
+}
+
+.status-card-3 {
+    top: 210px;
+}
+
+
+/* =========================================
+   STATUS ICON
+========================================= */
+
+.status-icon {
+    flex-shrink: 0;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #fff3df;
+
+    color: #ff7a00;
+
+    font-size: 17px;
+}
+
+
+.status-text {
+    min-width: 0;
+}
+
+
+.status-text h4 {
+    margin: 0 0 5px;
+
+    color: #111827;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    line-height: 1.3;
+}
+
+
+.status-text p {
+    margin: 0;
+
+    color: #777;
+
+    font-size: 11px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================
+   ACTIVE NUMBER ANIMATION
+========================================= */
+
+.hero-number {
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.hero-number.active-number {
+    opacity: 1;
+
+    transform: scale(1.05);
+}
+
+
+/* =========================================
+   DESKTOP HERO ADJUSTMENT
+========================================= */
+
+@media (min-width: 1100px) {
+
+    .hero-visual {
+        height: 540px;
+    }
+
+    .hero-yellow-shape {
+        width: 470px;
+        height: 470px;
+
+        right: 50px;
+        top: 30px;
+    }
+
+    .hero-lady-back {
+        width: 350px;
+
+        right: 150px;
+    }
+
+    .hero-lady-front {
+        width: 380px;
+
+        right: 35px;
+    }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+
+    .hero-visual {
+        height: 480px;
+
+        margin-top: 30px;
+    }
+
+    .hero-yellow-shape {
+        width: 390px;
+        height: 390px;
+
+        right: 50%;
+        transform: translateX(50%);
+
+        top: 45px;
+    }
+
+    .hero-lady-back {
+        width: 290px;
+
+        right: 50%;
+
+        transform: translateX(25%);
+    }
+
+    .hero-lady-front {
+        width: 315px;
+
+        right: 50%;
+
+        transform: translateX(55%);
+    }
+
+    .order-status-container {
+        right: 10px;
+        top: 20px;
+
+        transform: scale(0.9);
+        transform-origin: top right;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .hero-visual {
+        height: 430px;
+
+        margin-top: 20px;
+    }
+
+    .hero-yellow-shape {
+        width: 310px;
+        height: 310px;
+
+        top: 70px;
+    }
+
+    .hero-lady-back {
+        width: 230px;
+
+        right: 48%;
+
+        transform: translateX(20%);
+    }
+
+    .hero-lady-front {
+        width: 250px;
+
+        right: 40%;
+
+        transform: translateX(50%);
+    }
+
+
+    .hero-number {
+        font-size: 100px;
+    }
+
+    .hero-number-1 {
+        right: 100px;
+        top: 120px;
+    }
+
+    .hero-number-2 {
+        right: 70px;
+        top: 170px;
+    }
+
+    .hero-number-3 {
+        right: 40px;
+        top: 220px;
+    }
+
+
+    .order-status-container {
+        right: 5px;
+        top: 15px;
+
+        transform: scale(0.68);
+
+        transform-origin: top right;
+    }
+
+}
+
+
+/* ================================================= */
+/* ================= SMALL MOBILE ================== */
+/* ================================================= */
+
+@media (max-width: 480px) {
+
+    .logo {
+        font-size: 22px;
+    }
+
+
+    .login-link {
+        display: none;
+    }
+
+
+    .hero-content {
+        padding-top: 45px;
+    }
+
+
+    .hero h1 {
+        font-size: 37px;
+    }
+
+
+    .hero-search {
+        height: auto;
+
+        flex-wrap: wrap;
+
+        padding: 8px;
+    }
+
+
+    .hero-search input {
+        height: 45px;
+
+        min-width: 0;
+    }
+
+
+    .hero-search button {
+        width: 100%;
+    }
+
+}
+
+/* ================= EXCLUSIVE DEALS ================= */
+
+.exclusive-deals {
+    width: 100%;
+    padding: 70px 6%;
+    background: #ffffff;
+}
+
+
+/* Heading */
+
+.deals-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+.deal-offer {
+    color: #fc8a06;
+    font-size: 18px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.deals-heading h2 {
+    margin: 0;
+    font-size: 32px;
+    color: #03081f;
+    font-weight: 700;
+}
+
+
+/* See all */
+
+.see-all {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #03081f;
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.see-all i {
+    color: #fc8a06;
+    transition: 0.3s ease;
+}
+
+.see-all:hover {
+    color: #fc8a06;
+}
+
+.see-all:hover i {
+    transform: translateX(5px);
+}
+
+
+/* Deals container */
+
+.deals-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+/* Deal card */
+
+.deal-card {
+    position: relative;
+
+    background: #ffffff;
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.deal-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Deal image */
+
+.deal-card > img {
+    width: 100%;
+    height: 230px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+.deal-card:hover > img {
+    transform: scale(1.05);
+}
+
+
+/* Deal content */
+
+.deal-content {
+    padding: 20px;
+}
+
+
+/* Discount badge */
+
+.discount-badge {
+    display: inline-block;
+
+    background: #fc8a06;
+    color: #ffffff;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    margin-bottom: 12px;
+}
+
+
+.deal-content h3 {
+    margin: 0 0 8px;
+
+    color: #03081f;
+
+    font-size: 21px;
+}
+
+
+.deal-content p {
+    margin: 0 0 18px;
+
+    color: #666;
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* Order button */
+
+.deal-btn {
+    display: inline-flex;
+
+    align-items: center;
+    gap: 8px;
+
+    padding: 10px 18px;
+
+    background: #fc8a06;
+    color: #ffffff;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.deal-btn:hover {
+    background: #03081f;
+    color: #ffffff;
+}
+
+.deal-btn i {
+    transition: 0.3s ease;
+}
+
+.deal-btn:hover i {
+    transform: translateX(4px);
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+
+    .deals-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .deals-heading h2 {
+        font-size: 28px;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .exclusive-deals {
+        padding: 50px 5%;
+    }
+
+    .deals-heading {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .deals-heading h2 {
+        font-size: 24px;
+    }
+
+    .deal-offer {
+        font-size: 15px;
+    }
+
+    .see-all {
+        font-size: 13px;
+    }
+
+    .deals-container {
+        grid-template-columns: 1fr;
+    }
+
+    .deal-card > img {
+        height: 220px;
+    }
+
+}
+
+/* ================= POPULAR CATEGORIES ================= */
+
+.popular-categories {
+    width: 100%;
+    padding: 70px 6%;
+    background: #f7f7f7;
+}
+
+
+/* Heading */
+
+.categories-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+.categories-heading span {
+    display: block;
+
+    color: #fc8a06;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    margin-bottom: 5px;
+}
+
+.categories-heading h2 {
+    margin: 0;
+
+    color: #03081f;
+
+    font-size: 32px;
+    font-weight: 700;
+}
+
+
+/* Categories container */
+
+.categories-container {
+    display: grid;
+
+    grid-template-columns: repeat(6, 1fr);
+
+    gap: 20px;
+}
+
+
+/* Category card */
+
+.category-card {
+    display: block;
+
+    text-decoration: none;
+
+    background: #ffffff;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Category image */
+
+.category-image {
+    width: 100%;
+    height: 150px;
+
+    overflow: hidden;
+}
+
+.category-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.category-card:hover .category-image img {
+    transform: scale(1.08);
+}
+
+
+/* Category name */
+
+.category-card h3 {
+    margin: 0;
+
+    padding: 16px 10px;
+
+    text-align: center;
+
+    color: #03081f;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    transition: color 0.3s ease;
+}
+
+.category-card:hover h3 {
+    color: #fc8a06;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1100px) {
+
+    .categories-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .popular-categories {
+        padding: 50px 5%;
+    }
+
+    .categories-heading {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .categories-heading h2 {
+        font-size: 25px;
+    }
+
+    .categories-heading span {
+        font-size: 14px;
+    }
+
+    .categories-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .category-image {
+        height: 140px;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .categories-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .category-image {
+        height: 120px;
+    }
+
+    .category-card h3 {
+        font-size: 14px;
+        padding: 12px 5px;
+    }
+
+}
+
+/* ================= POPULAR RESTAURANTS ================= */
+
+.popular-restaurants {
+    width: 100%;
+    padding: 65px 6%;
+    background: #ffffff;
+}
+
+
+/* Heading */
+
+.restaurants-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+.restaurants-heading span {
+    display: block;
+
+    color: #fc8a06;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    margin-bottom: 5px;
+}
+
+.restaurants-heading h2 {
+    margin: 0;
+
+    color: #03081f;
+
+    font-size: 30px;
+    font-weight: 700;
+}
+
+
+/* Restaurant row */
+
+.restaurants-container {
+    display: flex;
+
+    gap: 18px;
+
+    width: 100%;
+
+    overflow-x: auto;
+
+    padding-bottom: 10px;
+
+    scrollbar-width: none;
+}
+
+.restaurants-container::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Restaurant card */
+
+.restaurant-card {
+    flex: 0 0 180px;
+
+    display: block;
+
+    background: #ffffff;
+
+    text-decoration: none;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    border: 1px solid #eeeeee;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+
+    transition: 0.3s ease;
+}
+
+.restaurant-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Restaurant image */
+
+.restaurant-image {
+    width: 100%;
+    height: 120px;
+
+    overflow: hidden;
+}
+
+.restaurant-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: 0.4s ease;
+}
+
+.restaurant-card:hover .restaurant-image img {
+    transform: scale(1.06);
+}
+
+
+/* Restaurant information */
+
+.restaurant-info {
+    padding: 12px;
+}
+
+.restaurant-info h3 {
+    margin: 0 0 6px;
+
+    color: #03081f;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.restaurant-info p {
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+
+    color: #777;
+
+    font-size: 11px;
+}
+
+.restaurant-info p i {
+    color: #fc8a06;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .popular-restaurants {
+        padding: 50px 5%;
+    }
+
+    .restaurants-heading h2 {
+        font-size: 24px;
+    }
+
+    .restaurant-card {
+        flex: 0 0 160px;
+    }
+
+    .restaurant-image {
+        height: 110px;
+    }
+
+}
+
+/* ================= ROCKYDELISH PROMOTION ================= */
+
+.rockydelish-promotion {
+    width: 100%;
+    min-height: 430px;
+
+    padding: 60px 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 60px;
+
+    background: #03081f;
+
+    overflow: hidden;
+}
+
+
+/* Content */
+
+.promotion-content {
+    width: 52%;
+    color: #ffffff;
+}
+
+.promotion-label {
+    display: inline-block;
+
+    color: #fc8a06;
+
+    font-size: 17px;
+    font-weight: 700;
+
+    margin-bottom: 10px;
+}
+
+.promotion-content h2 {
+    max-width: 600px;
+
+    margin: 0 0 20px;
+
+    color: #ffffff;
+
+    font-size: 40px;
+    line-height: 1.2;
+}
+
+.promotion-content p {
+    max-width: 570px;
+
+    margin: 0 0 12px;
+
+    color: #d8d8d8;
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* Button */
+
+.promotion-btn {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 9px;
+
+    margin-top: 15px;
+
+    padding: 13px 23px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: #fc8a06;
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.promotion-btn:hover {
+    background: #ffffff;
+    color: #03081f;
+}
+
+.promotion-btn i {
+    transition: transform 0.3s ease;
+}
+
+.promotion-btn:hover i {
+    transform: translateX(5px);
+}
+
+
+/* ================= VISUAL ================= */
+
+.promotion-visual {
+    width: 40%;
+    min-height: 330px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Large circle */
+
+.visual-circle {
+    width: 290px;
+    height: 290px;
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    background: #fc8a06;
+
+    opacity: 0.95;
+}
+
+
+/* RockyDelish text */
+
+.promotion-text {
+    position: relative;
+    z-index: 3;
+
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+
+    font-size: 38px;
+    line-height: 0.95;
+}
+
+.promotion-text span {
+    color: #ffffff;
+}
+
+.promotion-text strong {
+    color: #03081f;
+}
+
+
+/* Food icons */
+
+.food-icon {
+    width: 58px;
+    height: 58px;
+
+    position: absolute;
+    z-index: 4;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    color: #fc8a06;
+
+    font-size: 24px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+
+    animation: floatingFood 3s ease-in-out infinite;
+}
+
+.food-icon-one {
+    top: 20px;
+    left: 10%;
+}
+
+.food-icon-two {
+    right: 5%;
+    top: 35%;
+
+    animation-delay: 0.7s;
+}
+
+.food-icon-three {
+    bottom: 15px;
+    left: 20%;
+
+    animation-delay: 1.2s;
+}
+
+
+/* Floating animation */
+
+@keyframes floatingFood {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 850px) {
+
+    .rockydelish-promotion {
+        flex-direction: column;
+
+        padding: 55px 6%;
+
+        gap: 40px;
+    }
+
+    .promotion-content {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .promotion-content h2 {
+        font-size: 32px;
+    }
+
+    .promotion-content p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .promotion-visual {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .promotion-content h2 {
+        font-size: 27px;
+    }
+
+    .promotion-label {
+        font-size: 15px;
+    }
+
+    .promotion-visual {
+        min-height: 280px;
+    }
+
+    .visual-circle {
+        width: 230px;
+        height: 230px;
+    }
+
+    .promotion-text {
+        font-size: 30px;
+    }
+
+}
+
+/* =====================================================
+   PARTNER & RIDER SECTION
+===================================================== */
+
+.partner-rider-section {
+    width: 100%;
+    padding: 70px 6%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+
+    background: #f7f7f7;
+}
+
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.promo-card {
+    height: 390px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+
+    background: #03081f;
+
+    display: flex;
+}
+
+
+/* =====================================================
+   TEXT SIDE
+===================================================== */
+
+.promo-content {
+    width: 52%;
+
+    position: relative;
+
+    z-index: 10;
+
+    padding: 40px 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.promo-label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #fc8a06;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+.promo-content h2 {
+    margin: 0 0 18px;
+
+    color: #ffffff;
+
+    font-size: 38px;
+    line-height: 1.05;
+
+    font-weight: 700;
+}
+
+
+.promo-content p {
+    max-width: 260px;
+
+    margin: 0 0 23px;
+
+    color: #eeeeee;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.promo-button {
+    width: fit-content;
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 12px 18px;
+
+    border-radius: 6px;
+
+    background: #fc8a06;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: .3s ease;
+}
+
+
+.promo-button:hover {
+    background: #ffffff;
+
+    color: #03081f;
+}
+
+
+.promo-button i {
+    transition: .3s ease;
+}
+
+
+.promo-button:hover i {
+    transform: translateX(5px);
+}
+
+
+/* =====================================================
+   VISUAL SIDE
+===================================================== */
+
+.promo-visual {
+    width: 55%;
+    height: 100%;
+
+    position: absolute;
+
+    right: 0;
+    top: 0;
+
+    z-index: 2;
+}
+
+
+/* =====================================================
+   ORANGE CIRCLES
+===================================================== */
+
+.visual-circle {
+    position: absolute;
+
+    border-radius: 50%;
+
+    background: #fc8a06;
+}
+
+
+.circle-one {
+    width: 270px;
+    height: 270px;
+
+    right: -55px;
+    top: 60px;
+
+    opacity: .95;
+}
+
+
+.circle-two {
+    width: 100px;
+    height: 100px;
+
+    right: 175px;
+    top: 20px;
+
+    background: #ffffff;
+
+    opacity: .9;
+}
+
+
+/* =====================================================
+   RESTAURANT ICON
+===================================================== */
+
+.restaurant-building {
+    width: 125px;
+    height: 125px;
+
+    position: absolute;
+
+    z-index: 5;
+
+    right: 65px;
+    top: 125px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 25px;
+
+    background: #ffffff;
+
+    color: #fc8a06;
+
+    font-size: 55px;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .2);
+
+    transform: rotate(-5deg);
+
+    transition: .4s ease;
+}
+
+
+.promo-card:hover .restaurant-building {
+    transform: rotate(0deg) scale(1.05);
+}
+
+
+/* =====================================================
+   RIDER ICON
+===================================================== */
+
+.rider-icon {
+    width: 135px;
+    height: 135px;
+
+    position: absolute;
+
+    z-index: 5;
+
+    right: 55px;
+    top: 125px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    color: #fc8a06;
+
+    font-size: 62px;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .2);
+
+    transform: rotate(-5deg);
+
+    transition: .4s ease;
+}
+
+
+.promo-card:hover .rider-icon {
+    transform: rotate(0deg) scale(1.05);
+}
+
+
+/* =====================================================
+   FOOD ICONS
+===================================================== */
+
+.food-icon {
+    width: 55px;
+    height: 55px;
+
+    position: absolute;
+
+    z-index: 7;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    color: #fc8a06;
+
+    font-size: 23px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .18);
+
+    animation: floatingFood 3s ease-in-out infinite;
+}
+
+
+.burger-icon {
+    right: 20px;
+    top: 55px;
+}
+
+
+/* .pizza-icon {
+    right: 210px;
+    top: 245px;
+
+    animation-delay: .7s;
+} */
+
+
+.chicken-icon {
+    right: 35px;
+    bottom: 25px;
+
+    animation-delay: 1.2s;
+}
+
+
+@keyframes floatingFood {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+/* =====================================================
+   DELIVERY BOX
+===================================================== */
+
+.delivery-box {
+    width: 65px;
+    height: 65px;
+
+    position: absolute;
+
+    z-index: 7;
+
+    right: 205px;
+    bottom: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    color: #fc8a06;
+
+    font-size: 28px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .18);
+
+    transform: rotate(8deg);
+}
+
+
+/* =====================================================
+   RIDER FOOD
+===================================================== */
+
+.rider-food-one {
+    right: 20px;
+    top: 55px;
+}
+
+
+.rider-food-two {
+    right: 205px;
+    top: 250px;
+
+    animation-delay: .8s;
+}
+
+
+/* =====================================================
+   FLOATING INFORMATION
+===================================================== */
+
+.floating-info {
+    position: absolute;
+
+    z-index: 15;
+
+    right: 20px;
+    top: 35px;
+
+    min-width: 170px;
+
+    padding: 15px 18px;
+
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .18);
+}
+
+
+.floating-info strong {
+    color: #03081f;
+
+    font-size: 15px;
+
+    margin-bottom: 3px;
+}
+
+
+.floating-info span {
+    color: #666;
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .partner-rider-section {
+        grid-template-columns: 1fr;
+    }
+
+    .promo-card {
+        height: 390px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .partner-rider-section {
+        padding: 50px 5%;
+    }
+
+    .promo-card {
+        height: 430px;
+    }
+
+    .promo-content {
+        width: 58%;
+
+        padding: 25px 20px;
+    }
+
+    .promo-content h2 {
+        font-size: 30px;
+    }
+
+    .promo-content p {
+        font-size: 12px;
+    }
+
+    .promo-visual {
+        width: 55%;
+    }
+
+    .circle-one {
+        width: 220px;
+        height: 220px;
+
+        right: -55px;
+        top: 100px;
+    }
+
+    .restaurant-building,
+    .rider-icon {
+        right: 25px;
+        top: 145px;
+    }
+
+    .floating-info {
+        min-width: 135px;
+
+        right: 10px;
+        top: 30px;
+
+        padding: 12px;
+    }
+
+    .floating-info strong {
+        font-size: 13px;
+    }
+
+    .floating-info span {
+        font-size: 11px;
+    }
+}
+
+/* =====================================================
+   HOW FOOD ORDER WORKS
+===================================================== */
+
+.how-order-section {
+    width: 100%;
+
+    padding: 80px 6%;
+
+    background: #03081f;
+
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.how-order-heading {
+    max-width: 650px;
+
+    margin: 0 auto 55px;
+
+    text-align: center;
+}
+
+
+.how-order-heading span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #fc8a06;
+
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+.how-order-heading h2 {
+    margin: 0 0 15px;
+
+    color: #ffffff;
+
+    font-size: 36px;
+    font-weight: 700;
+}
+
+
+.how-order-heading p {
+    margin: 0;
+
+    color: #cfcfcf;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   STEPS
+===================================================== */
+
+.order-steps {
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =====================================================
+   STEP CARD
+===================================================== */
+
+.order-step {
+    position: relative;
+
+    padding: 35px 30px;
+
+    text-align: center;
+
+    border: 1px solid rgba(255, 255, 255, .08);
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, .04);
+
+    transition: .4s ease;
+}
+
+
+.order-step:hover {
+    transform: translateY(-8px);
+
+    background: rgba(255, 255, 255, .08);
+
+    border-color: #fc8a06;
+}
+
+
+/* =====================================================
+   STEP NUMBER
+===================================================== */
+
+.step-number {
+    position: absolute;
+
+    top: 15px;
+    right: 18px;
+
+    color: rgba(255, 255, 255, .2);
+
+    font-size: 24px;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   STEP ICON
+===================================================== */
+
+.step-icon {
+    width: 75px;
+    height: 75px;
+
+    margin: 10px auto 25px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #fc8a06;
+
+    color: #ffffff;
+
+    font-size: 28px;
+
+    box-shadow: 0 10px 25px rgba(252, 138, 6, .2);
+
+    transition: .4s ease;
+}
+
+
+.order-step:hover .step-icon {
+    transform: scale(1.08) rotate(5deg);
+}
+
+
+/* =====================================================
+   TEXT
+===================================================== */
+
+.order-step h3 {
+    margin: 0 0 12px;
+
+    color: #ffffff;
+
+    font-size: 19px;
+
+    font-weight: 600;
+}
+
+
+.order-step p {
+    margin: 0;
+
+    color: #bdbdbd;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 850px) {
+
+    .order-steps {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+    }
+
+    .order-step {
+        padding: 30px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .how-order-section {
+        padding: 60px 5%;
+    }
+
+    .how-order-heading h2 {
+        font-size: 29px;
+    }
+
+    .how-order-heading p {
+        font-size: 13px;
+    }
+
+    .order-step h3 {
+        font-size: 18px;
+    }
+}
+/* =====================================================
+   ROCKYDELISH STATISTICS
+===================================================== */
+
+.rockydelish-stats {
+    width: 100%;
+    padding: 38px 6%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: #fc8a06;
+    border-top: 18px solid #ffffff;
+    border-bottom: 18px solid #ffffff;
+}
+
+.stat-item {
+    padding: 8px 20px;
+    text-align: center;
+    border-right: 1px solid rgba(255, 255, 255, .35);
+}
+
+.stat-item:last-child {
+    border-right: none;
+}
+
+.stat-item h2 {
+    margin: 0 0 5px;
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.stat-item p {
+    margin: 0;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 800px) {
+
+    .rockydelish-stats {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 35px 5%;
+        border-top: 15px solid #ffffff;
+        border-bottom: 15px solid #ffffff;
+        gap: 15px;
+    }
+
+    .stat-item:nth-child(2) {
+        border-right: none;
+    }
+
+    .stat-item:nth-child(3),
+    .stat-item:nth-child(4) {
+        border-top: 1px solid rgba(255, 255, 255, .35);
+        padding-top: 20px;
+    }
+
+    .stat-item:nth-child(4) {
+        border-right: none;
+    }
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 500px) {
+
+    .rockydelish-stats {
+        padding: 30px 4%;
+        border-top: 12px solid #ffffff;
+        border-bottom: 12px solid #ffffff;
+        gap: 12px;
+    }
+
+    .stat-item {
+        padding: 7px 10px;
+    }
+
+    .stat-item h2 {
+        font-size: 26px;
+    }
+
+    .stat-item p {
+        font-size: 11px;
+    }
+}
+
+/* =====================================================
+   ROCKYDELISH FOOTER
+===================================================== */
+
+.rockydelish-footer {
+    width: 100%;
+    background: #03081f;
+    color: #ffffff;
+    padding: 65px 6% 0;
+}
+
+.footer-container {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 50px;
+    padding-bottom: 50px;
+}
+
+
+/* ================= BRAND ================= */
+
+.footer-brand {
+    max-width: 320px;
+}
+
+.footer-logo {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.footer-logo span {
+    color: #fc8a06;
+}
+
+.footer-brand p {
+    margin: 0;
+    color: #bdbdbd;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* ================= SOCIAL ICONS ================= */
+
+.footer-socials {
+    display: flex;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.footer-socials a {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+
+    color: #ffffff;
+    text-decoration: none;
+
+    transition: .3s ease;
+}
+
+.footer-socials a:hover {
+    background: #fc8a06;
+    transform: translateY(-3px);
+}
+
+
+/* ================= FOOTER COLUMNS ================= */
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column h3 {
+    margin: 0 0 20px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.footer-column a {
+    width: fit-content;
+    margin-bottom: 12px;
+
+    color: #bdbdbd;
+    font-size: 13px;
+    text-decoration: none;
+
+    transition: .3s ease;
+}
+
+.footer-column a:hover {
+    color: #fc8a06;
+    transform: translateX(3px);
+}
+
+
+/* ================= CONTACT ================= */
+
+.footer-contact p {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+
+    margin: 0 0 14px;
+
+    color: #bdbdbd;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.footer-contact p i {
+    width: 15px;
+    margin-top: 3px;
+    color: #fc8a06;
+}
+
+
+/* ================= FOOTER BOTTOM ================= */
+
+.footer-bottom {
+    max-width: 1250px;
+    margin: 0 auto;
+
+    padding: 22px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #888;
+    font-size: 12px;
+}
+
+.footer-bottom-links {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-bottom-links a {
+    color: #888;
+    font-size: 12px;
+    text-decoration: none;
+    transition: .3s ease;
+}
+
+.footer-bottom-links a:hover {
+    color: #fc8a06;
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 900px) {
+
+    .footer-container {
+        grid-template-columns: 1.5fr 1fr 1fr;
+        gap: 35px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+        max-width: 500px;
+    }
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+    .rockydelish-footer {
+        padding: 50px 6% 0;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px 25px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .footer-bottom-links {
+        gap: 18px;
+        flex-wrap: wrap;
+    }
+}

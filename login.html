@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RockyDelish - Login</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <div class="auth-page">
+
+        <div class="auth-header">
+
+            <button class="back-btn" onclick="goBack()">
+                <i class="fa-solid fa-arrow-left"></i>
+            </button>
+
+            <h2>Login</h2>
+
+        </div>
+
+
+        <div class="auth-container">
+
+            <div class="logo-area">
+                <h1>Rocky<span>Delish</span></h1>
+                <p>Welcome back!</p>
+            </div>
+
+
+            <form id="loginForm">
+
+                <div class="input-group">
+                    <label>Email</label>
+
+                    <div class="input-box">
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Enter your email"
+                            required>
+                    </div>
+                </div>
+
+
+                <div class="input-group">
+                    <label>Password</label>
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Enter your password"
+                            required>
+
+                        <i
+                            class="fa-solid fa-eye password-eye"
+                            id="loginEye"
+                            onclick="toggleLoginPassword()">
+                        </i>
+
+                    </div>
+                </div>
+
+
+                <div class="forgot-password">
+                    <a href="#">Forgot Password?</a>
+                </div>
+
+
+                <button type="submit" class="auth-btn">
+                    Login
+                </button>
+
+            </form>
+
+
+            <div class="divider">
+                <span>OR</span>
+            </div>
+
+
+            <button type="button" class="social-btn google-btn" id="googleLoginBtn">
+
+                <i class="fa-brands fa-google"></i>
+
+                Continue with Google
+
+            </button>
+            
+
+
+            <p class="account-text">
+
+                Don't have an account?
+
+                <a href="./signup.html">
+                    Sign Up
+                </a>
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script type="module" src="login.js"></script>
+</body>
+
+</html>
+
+

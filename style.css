@@ -1,0 +1,568 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+    color: #222;
+}
+
+
+/* =========================
+   SIGN UP PAGE
+========================= */
+
+.signup-page {
+    min-height: 100vh;
+
+    display: flex;
+
+    width: 100%;
+}
+
+
+/* =========================
+   LEFT DESIGN
+========================= */
+
+.signup-design {
+    width: 50%;
+    min-height: 100vh;
+
+    background: #f8cd50;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 60px;
+}
+
+
+.design-content {
+    max-width: 500px;
+}
+
+
+.design-content h1 {
+    font-size: 48px;
+    margin-bottom: 60px;
+}
+
+
+.design-content h1 span {
+    color: #f15a24;
+}
+
+
+.design-content h2 {
+    font-size: 45px;
+    line-height: 1.15;
+
+    margin-bottom: 25px;
+}
+
+
+.design-content p {
+    font-size: 18px;
+    line-height: 1.7;
+
+    color: #5d5131;
+
+    max-width: 430px;
+}
+
+
+.food-decoration {
+    display: flex;
+
+    gap: 30px;
+
+    margin-top: 60px;
+}
+
+
+.food-decoration i {
+    width: 70px;
+    height: 70px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 28px;
+
+    color: #f15a24;
+
+    transition: 0.3s;
+}
+
+
+.food-decoration i:hover {
+    transform: translateY(-8px) rotate(5deg);
+}
+
+
+/* =========================
+   RIGHT SIDE
+========================= */
+
+.signup-section {
+    width: 50%;
+    min-height: 100vh;
+
+    background: white;
+
+    overflow-y: auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.auth-header {
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 0 50px;
+
+    border-bottom: 1px solid #eee;
+}
+
+
+.auth-header h2 {
+    font-size: 22px;
+}
+
+
+.back-btn {
+    border: none;
+
+    background: transparent;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.back-btn:hover {
+    color: #f15a24;
+
+    transform: translateX(-4px);
+}
+
+
+/* =========================
+   FORM CONTAINER
+========================= */
+
+.signup-container {
+    width: 100%;
+
+    max-width: 560px;
+
+    margin: auto;
+
+    padding: 45px 50px;
+}
+
+
+.welcome-text {
+    margin-bottom: 30px;
+}
+
+
+.welcome-text h3 {
+    font-size: 28px;
+
+    margin-bottom: 8px;
+}
+
+
+.welcome-text p {
+    color: #777;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   INPUTS
+========================= */
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+
+.input-group label {
+    display: block;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-bottom: 8px;
+}
+
+
+.input-box {
+    width: 100%;
+
+    min-height: 52px;
+
+    display: flex;
+    align-items: center;
+
+    background: #f4e9b0;
+
+    border-radius: 10px;
+
+    padding: 0 15px;
+
+    transition: 0.3s;
+}
+
+
+.input-box:focus-within {
+    box-shadow: 0 0 0 2px #f8cd50;
+}
+
+
+.input-box > i:first-child {
+    color: #777;
+
+    width: 22px;
+}
+
+
+.input-box input {
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    padding: 15px 10px;
+
+    font-size: 15px;
+}
+
+
+.password-eye {
+    cursor: pointer;
+
+    width: auto !important;
+}
+
+
+.password-eye:hover {
+    color: #f15a24;
+}
+
+
+/* =========================
+   TERMS
+========================= */
+
+.terms {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin: 10px 0 20px;
+
+    font-size: 13px;
+
+    color: #666;
+}
+
+
+.terms input {
+    cursor: pointer;
+}
+
+
+/* =========================
+   SIGN UP BUTTON
+========================= */
+
+.signup-btn {
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #f15a24;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.signup-btn:hover {
+    transform: translateY(-2px);
+
+    opacity: 0.9;
+}
+
+
+.signup-btn:active {
+    transform: scale(0.98);
+}
+
+
+/* =========================
+   DIVIDER
+========================= */
+
+.divider {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin: 25px 0;
+}
+
+
+.divider::before,
+.divider::after {
+    content: "";
+
+    height: 1px;
+
+    background: #ddd;
+
+    flex: 1;
+}
+
+
+.divider span {
+    color: #999;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   SOCIAL BUTTONS
+========================= */
+
+.social-btn {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    background: white;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    margin-bottom: 12px;
+
+    transition: 0.3s;
+}
+
+
+.social-btn:hover {
+    background: #fafafa;
+
+    transform: translateY(-2px);
+}
+
+
+.social-btn i {
+    margin-right: 10px;
+}
+
+
+.facebook-btn {
+    color: #1877f2;
+}
+
+
+/* =========================
+   LOGIN TEXT
+========================= */
+
+.login-text {
+    text-align: center;
+
+    margin-top: 20px;
+
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+.login-text a {
+    color: #f15a24;
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+
+.login-text a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+    .signup-design {
+        width: 40%;
+
+        padding: 30px;
+    }
+
+
+    .signup-section {
+        width: 60%;
+    }
+
+
+    .design-content h1 {
+        font-size: 35px;
+
+        margin-bottom: 40px;
+    }
+
+
+    .design-content h2 {
+        font-size: 30px;
+    }
+
+
+    .design-content p {
+        font-size: 15px;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .signup-page {
+        display: block;
+    }
+
+
+    .signup-design {
+        width: 100%;
+
+        min-height: 260px;
+
+        padding: 30px;
+    }
+
+
+    .design-content {
+        text-align: center;
+    }
+
+
+    .design-content h1 {
+        font-size: 32px;
+
+        margin-bottom: 20px;
+    }
+
+
+    .design-content h2 {
+        font-size: 26px;
+
+        margin-bottom: 10px;
+    }
+
+
+    .design-content p {
+        font-size: 14px;
+
+        margin: auto;
+    }
+
+
+    .food-decoration {
+        justify-content: center;
+
+        margin-top: 25px;
+
+        gap: 15px;
+    }
+
+
+    .food-decoration i {
+        width: 50px;
+        height: 50px;
+
+        font-size: 20px;
+    }
+
+
+    .signup-section {
+        width: 100%;
+
+        min-height: auto;
+    }
+
+
+    .auth-header {
+        padding: 0 20px;
+    }
+
+
+    .signup-container {
+        padding: 30px 20px;
+    }
+
+}
+.hidden {
+    display: none !important;
+}

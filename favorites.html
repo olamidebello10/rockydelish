@@ -1,0 +1,364 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>My Favorites | RockyDelish</title>
+
+
+    <!-- GOOGLE FONT -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- FONT AWESOME -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- SWEETALERT -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    <!-- FAVORITES CSS -->
+    <link
+        rel="stylesheet"
+        href="favorites.css"
+    >
+</head>
+
+
+<body>
+
+
+    <!-- ========================================
+         NAVBAR
+    ========================================= -->
+
+    <nav class="navbar">
+
+        <a
+            href="index.html"
+            class="logo"
+        >
+            Rocky<span>Delish</span>
+        </a>
+
+
+        <div
+            class="nav-links"
+            id="navLinks"
+        >
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="products.html">
+                Menu
+            </a>
+
+            <a href="restaurants.html" >
+                Restaurants
+            </a>
+
+            <a href="food-match.html">
+                Food Match
+            </a>
+
+
+            <a href="orders.html">
+                My Orders
+            </a>
+
+            <a href="favorites.html" class="active">
+    <i class="fa-solid fa-heart"></i>
+    Favorites
+</a>
+
+        </div>
+
+
+        <div class="nav-right">
+
+
+            <!-- ACCOUNT -->
+
+            <a
+                href="account.html"
+                class="account-btn"
+            >
+
+                <i class="fa-solid fa-circle-user"></i>
+
+                <span>
+                    Account
+                </span>
+
+            </a>
+
+
+            <!-- CART -->
+
+            <a
+                href="cart.html"
+                class="cart-btn"
+                title="Cart"
+            >
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                <span
+                    class="cart-count"
+                    id="cartCount"
+                >
+                    0
+                </span>
+
+            </a>
+
+
+        </div>
+
+
+        <!-- MOBILE MENU -->
+
+        <button
+            type="button"
+            class="menu-btn"
+            id="menuBtn"
+            aria-label="Open navigation menu"
+        >
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+
+    </nav>
+
+
+
+    <!-- ========================================
+         FAVORITES HERO
+    ========================================= -->
+
+    <section class="favorites-hero">
+
+
+        <div class="hero-content">
+
+
+            <div class="hero-label">
+
+                <i class="fa-solid fa-heart"></i>
+
+                MY FAVORITES
+
+            </div>
+
+
+            <h1>
+
+                Your favorite foods
+
+                <span>
+                    all in one place.
+                </span>
+
+            </h1>
+
+
+            <p>
+
+                Save the meals you love and find them easily
+                whenever you're ready to order.
+
+            </p>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ========================================
+         FAVORITES SECTION
+    ========================================= -->
+
+    <main class="favorites-section">
+
+
+        <div class="favorites-header">
+
+
+            <div>
+
+                <span class="section-label">
+                    SAVED FOODS
+                </span>
+
+
+                <h2>
+                    My Favorites
+                </h2>
+
+            </div>
+
+
+            <a
+                href="products.html"
+                class="browse-menu-btn"
+            >
+
+                <i class="fa-solid fa-utensils"></i>
+
+                Browse Menu
+
+            </a>
+
+
+        </div>
+
+
+        <!-- FAVORITE FOODS -->
+
+        <div
+            class="favorites-grid"
+            id="favoritesContainer"
+        >
+        </div>
+
+
+        <!-- EMPTY FAVORITES -->
+
+        <div
+            class="empty-favorites"
+            id="emptyFavorites"
+        >
+
+            <div class="empty-icon">
+
+                <i class="fa-regular fa-heart"></i>
+
+            </div>
+
+
+            <h3>
+                No favorite foods yet
+            </h3>
+
+
+            <p>
+                Save your favorite meals from the menu
+                and they will appear here.
+            </p>
+
+
+            <a
+                href="products.html"
+                class="empty-btn"
+            >
+
+                <i class="fa-solid fa-utensils"></i>
+
+                Browse Menu
+
+            </a>
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- ========================================
+         FOOTER
+    ========================================= -->
+
+    <footer class="footer">
+
+
+        <div class="footer-content">
+
+
+            <div class="footer-brand">
+
+                <a
+                    href="index.html"
+                    class="footer-logo"
+                >
+                    Rocky<span>Delish</span>
+                </a>
+
+
+                <p>
+                    Delicious food delivered fresh
+                    and fast to your doorstep.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="products.html">
+                    Menu
+                </a>
+
+                <a href="favorites.html">
+                    Favorites
+                </a>
+
+                <a href="orders.html">
+                    My Orders
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 RockyDelish. All rights reserved.
+            </p>
+
+        </div>
+
+
+    </footer>
+
+
+
+    <!-- FAVORITES JS -->
+
+    <script
+        type="module"
+        src="favorites.js"
+    ></script>
+</body>
+
+</html>
+
+

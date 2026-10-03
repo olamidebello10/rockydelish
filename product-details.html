@@ -1,0 +1,235 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product Details - RockyDelish</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="product-details.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+            Rocky<span>Delish</span>
+        </a>
+
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="products.html">Menu</a>
+            
+            <a href="restaurants.html" class="active">
+                Restaurants
+            </a>
+
+            <a href="food-match.html">
+                Food Match
+            </a>
+
+
+            <a href="orders.html">
+                My Orders
+            </a>
+
+            <a href="favorites.html">
+    <i class="fa-solid fa-heart"></i>
+    Favorites
+</a>
+        </div>
+
+        <div class="nav-right">
+
+            <a href="account.html" class="account-btn">
+                <i class="fa-solid fa-circle-user"></i>
+                <span>Account</span>
+            </a>
+
+            <a href="cart.html" class="cart-btn" title="Cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </a>
+
+        </div>
+
+        <!-- MOBILE MENU BUTTON -->
+        <button
+            class="menu-btn"
+            id="menuBtn"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+        >
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </nav>
+
+
+    <!-- ================= PRODUCT DETAILS ================= -->
+
+    <main class="product-details-page">
+
+        <section class="product-details">
+
+            <!-- IMAGE -->
+            <div class="product-image-box">
+                <img
+                    id="foodImage"
+                    src=""
+                    alt="Food"
+                >
+            </div>
+
+
+            <!-- DETAILS -->
+            <div class="product-info">
+
+                <span
+                    class="product-category"
+                    id="foodCategory"
+                >
+                    Food
+                </span>
+
+                <h1 id="foodName">
+                    Food Name
+                </h1>
+
+                <div
+                    class="product-price"
+                    id="foodPrice"
+                >
+                    ₦0
+                </div>
+
+                <p id="foodDescription">
+                    Delicious food prepared fresh for you.
+                </p>
+
+
+                <!-- QUANTITY -->
+                <div class="quantity-area">
+
+                    <button
+                        type="button"
+                        id="decreaseBtn"
+                        aria-label="Decrease quantity"
+                    >
+                        −
+                    </button>
+
+                    <span id="quantityNumber">
+                        0
+                    </span>
+
+                    <button
+                        type="button"
+                        id="increaseBtn"
+                        aria-label="Increase quantity"
+                    >
+                        +
+                    </button>
+
+                </div>
+
+
+                <!-- ADD TO CART -->
+                <button
+                    type="button"
+                    id="addToCartBtn"
+                    class="add-to-cart-btn"
+                >
+                    <i class="fa-solid fa-cart-plus"></i>
+                    Add to Cart
+                </button>
+
+
+                <!-- BACK -->
+                <a
+                    href="products.html"
+                    class="back-menu-btn"
+                >
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Back to Menu
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+                <h2>
+                    Rocky<span>Delish</span>
+                </h2>
+
+                <p>
+                    Delicious meals delivered fresh and fast to your doorstep.
+                </p>
+            </div>
+
+
+            <div class="footer-links">
+
+                <div>
+                    <h3>Quick Links</h3>
+
+                    <a href="index.html">Home</a>
+                    <a href="products.html">Menu</a>
+                    <a href="favorites.html">Favorites</a>
+                    <a href="orders.html">My Orders</a>
+                </div>
+
+
+                <div>
+                    <h3>Support</h3>
+
+                    <a href="account.html">Account</a>
+                    <a href="cart.html">Cart</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © 2026 RockyDelish. All rights reserved.
+            </p>
+        </div>
+
+    </footer>
+
+
+    <!-- JS -->
+    <script type="module" src="product-details.js"></script>
+
+</body>
+</html>

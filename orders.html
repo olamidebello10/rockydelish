@@ -1,0 +1,368 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Orders | RockyDelish</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Orders CSS -->
+    <link rel="stylesheet" href="orders.css">
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <!-- LOGO -->
+        <a href="index.html" class="logo">
+            Rocky<span>Delish</span>
+        </a>
+
+
+        <!-- NAVIGATION LINKS -->
+        <div class="nav-links" id="navLinks">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="products.html">
+                Menu
+            </a>
+
+            <a href="restaurants.html" >
+                Restaurants
+            </a>
+
+            <a href="food-match.html">
+                Food Match
+            </a>
+
+
+            <a href="orders.html" class="active">
+                My Orders
+            </a>
+
+            <a href="favorites.html">
+    <i class="fa-solid fa-heart"></i>
+    Favorites
+</a>
+
+        </div>
+
+
+        <!-- RIGHT SIDE -->
+        <div class="nav-right">
+
+            <!-- ACCOUNT -->
+            <a href="account.html" class="account-btn">
+
+                <i class="fa-solid fa-circle-user"></i>
+
+                <span>
+                    Account
+                </span>
+
+            </a>
+
+
+            <!-- CART -->
+            <a
+                href="cart.html"
+                class="cart-btn"
+                title="Cart"
+            >
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                <span
+                    class="cart-count"
+                    id="cartCount"
+                >
+                    0
+                </span>
+
+            </a>
+
+        </div>
+
+
+        <!-- MOBILE MENU BUTTON -->
+        <button
+            class="menu-btn"
+            id="menuBtn"
+            type="button"
+            aria-label="Open navigation menu"
+        >
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </nav>
+
+
+
+    <!-- ================= ORDERS PAGE ================= -->
+
+    <main class="orders-page">
+
+
+        <!-- PAGE HEADING -->
+
+        <section class="orders-heading">
+
+            <h1>
+                My <span>Orders</span>
+            </h1>
+
+            <p>
+                Track your orders and view your order history.
+            </p>
+
+        </section>
+
+
+
+        <!-- ================= NO ORDERS ================= -->
+
+        <section
+            class="no-order"
+            id="noOrders"
+        >
+
+            <div class="no-order-icon">
+
+                <i class="fa-solid fa-receipt"></i>
+
+            </div>
+
+
+            <h2>
+                No Orders Yet
+            </h2>
+
+
+            <p>
+                You haven't placed any orders yet.
+                Start ordering your favourite meals!
+            </p>
+
+
+            <button
+                class="browse-btn"
+                id="orderMoreBtn"
+                type="button"
+            >
+
+                <i class="fa-solid fa-utensils"></i>
+
+                Order Food
+
+            </button>
+
+        </section>
+
+
+
+        <!-- ================= ORDER CONTENT ================= -->
+
+        <section
+            class="order-content"
+            id="ordersContainer"
+        >
+
+            <!-- Orders will be created here by JavaScript -->
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+
+        <div class="footer-container">
+
+
+            <!-- BRAND -->
+
+            <div class="footer-brand">
+
+                <a
+                    href="index.html"
+                    class="footer-logo"
+                >
+                    Rocky<span>Delish</span>
+                </a>
+
+
+                <p>
+                    Delicious meals delivered straight to your door.
+                </p>
+
+
+                <div class="social-links">
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- COMPANY -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Company
+                </h3>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="products.html">
+                    Menu
+                </a>
+
+                <a href="orders.html">
+                    My Orders
+                </a>
+
+                <a href="account.html">
+                    Account
+                </a>
+
+            </div>
+
+
+
+            <!-- HELP -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Help
+                </h3>
+
+                <a href="#">
+                    FAQs
+                </a>
+
+                <a href="#">
+                    Contact Us
+                </a>
+
+                <a href="#">
+                    Terms & Conditions
+                </a>
+
+                <a href="#">
+                    Privacy Policy
+                </a>
+
+            </div>
+
+
+
+            <!-- CONTACT -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Contact
+                </h3>
+
+
+                <a href="tel:+2340000000000">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    +234 000 000 0000
+
+                </a>
+
+
+                <a href="mailto:info@rockydelish.com">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    info@rockydelish.com
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- FOOTER BOTTOM -->
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 RockyDelish. All rights reserved.
+            </p>
+
+        </div>
+
+
+    </footer>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script type="module" src="orders.js"></script>
+</body>
+
+</html>
+
+

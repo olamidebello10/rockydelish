@@ -1,0 +1,341 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Restaurant Menu - RockyDelish</title>
+
+    <!-- FONT AWESOME -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- CSS -->
+    <link
+        rel="stylesheet"
+        href="restaurant-details.css"
+    >
+</head>
+
+
+<body>
+
+
+    <!-- ==================================================
+         NAVBAR
+    ================================================== -->
+
+    <nav class="navbar">
+
+        <!-- LOGO -->
+
+        <a href="index.html" class="logo">
+            Rocky<span>Delish</span>
+        </a>
+
+
+        <!-- NAVIGATION LINKS -->
+
+        <div class="nav-links" id="navLinks">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="products.html">
+                Menu
+            </a>
+
+            <a href="restaurants.html">
+                Restaurants
+            </a>
+
+             <a href="food-match.html">
+                Food Match
+            </a>
+
+
+            <a href="orders.html">
+                My Orders
+            </a>
+
+            <a href="favorites.html">
+    <i class="fa-solid fa-heart"></i>
+    Favorites
+</a>
+
+        </div>
+
+
+        <!-- RIGHT SIDE -->
+
+        <div class="nav-right">
+
+            <!-- CART -->
+
+            <a
+                href="cart.html"
+                class="cart-btn"
+                title="Cart"
+            >
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                <span
+                    class="cart-count"
+                    id="cartCount"
+                >
+                    0
+                </span>
+
+            </a>
+
+
+            <!-- ACCOUNT -->
+
+            <a
+                href="account.html"
+                class="account-btn"
+            >
+
+                <i class="fa-solid fa-circle-user"></i>
+
+                <span>
+                    Account
+                </span>
+
+            </a>
+
+
+            <!-- MOBILE MENU -->
+
+            <button
+                class="menu-btn"
+                id="menuBtn"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ==================================================
+         RESTAURANT HERO
+    ================================================== -->
+
+    <section class="restaurant-hero">
+
+        <!-- IMAGE -->
+
+        <div class="restaurant-hero-image">
+
+            <img
+                id="restaurantImage"
+                src=""
+                alt="Restaurant"
+            >
+
+        </div>
+
+
+        <!-- CONTENT -->
+
+        <div class="restaurant-hero-content">
+
+            <span class="restaurant-label">
+                Restaurant
+            </span>
+
+
+            <h1 id="restaurantName">
+                Restaurant
+            </h1>
+
+
+            <p class="restaurant-location">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                <span id="restaurantLocation">
+                    Ibadan
+                </span>
+
+            </p>
+
+
+            <p id="restaurantDescription">
+                Order delicious food from this restaurant.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         RESTAURANT MENU
+    ================================================== -->
+
+    <section class="restaurant-menu">
+
+
+        <!-- SECTION HEADING -->
+
+        <div class="section-heading">
+
+            <span>
+                MENU
+            </span>
+
+            <h2>
+                Explore Our Food
+            </h2>
+
+            <p>
+                Choose from our delicious meals and add your favourite to your cart.
+            </p>
+
+        </div>
+
+
+        <!-- FOOD CONTAINER -->
+
+        <div
+            id="restaurantFoodContainer"
+            class="restaurant-food-grid"
+        >
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         FOOTER
+    ================================================== -->
+
+    <footer class="footer">
+
+
+        <div class="footer-container">
+
+
+            <!-- BRAND -->
+
+            <div class="footer-brand">
+
+                <a
+                    href="index.html"
+                    class="logo"
+                >
+                    Rocky<span>Delish</span>
+                </a>
+
+                <p>
+                    Delicious food delivered to your doorstep.
+                </p>
+
+            </div>
+
+
+            <!-- QUICK LINKS -->
+
+            <div class="footer-links">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="products.html">
+                    Menu
+                </a>
+
+                <a href="restaurants.html">
+                    Restaurants
+                </a>
+
+                <a href="orders.html">
+                    My Orders
+                </a>
+
+            </div>
+
+
+            <!-- ACCOUNT LINKS -->
+
+            <div class="footer-links">
+
+                <h3>
+                    Account
+                </h3>
+
+                <a href="account.html">
+                    My Account
+                </a>
+
+                <a href="favorites.html">
+                    My Favorites
+                </a>
+
+                <a href="cart.html">
+                    Cart
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOTER BOTTOM -->
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 RockyDelish. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- SWEETALERT -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/sweetalert2@11"
+    ></script>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script
+        type="module"
+        src="restaurant-details.js"
+    ></script>
+</body>
+
+</html>
+
+
