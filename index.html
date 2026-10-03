@@ -1,855 +1,653 @@
-﻿<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>RockyDelish</title>
 
     <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet"
-    >
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Font Awesome -->
     <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    >
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
 
-    <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="motion.css">
-</head>
+    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="motion.css" />
+  </head>
 
-<body>
-
-
+  <body>
     <!-- ================= NAVBAR ================= -->
 
     <nav class="navbar">
+      <!-- LOGO -->
 
-        <!-- LOGO -->
+      <a href="index.html" class="logo"> Rocky<span>Delish</span> </a>
 
-        <a href="index.html" class="logo">
-            Rocky<span>Delish</span>
+      <!-- NAV LINKS -->
+
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" class="active"> Home </a>
+
+        <a href="products.html"> Menu </a>
+
+        <a href="restaurants.html"> Restaurants </a>
+
+        <a href="food-match.html"> Food match </a>
+
+        <a href="orders.html"> My Orders </a>
+
+        <a href="favorites.html">
+          <i class="fa-solid fa-heart"></i>
+          Favorites
+        </a>
+      </div>
+
+      <!-- RIGHT SIDE -->
+
+      <div class="nav-right">
+        <!-- CART ICON -->
+
+        <a href="cart.html" class="cart-btn" title="Cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+
+          <span class="cart-count"> 0 </span>
         </a>
 
+        <!-- LOGIN / SIGN UP -->
 
-        <!-- NAV LINKS -->
+        <div id="authArea" class="auth-area">
+          <a href="login.html" class="login-link"> Login </a>
 
-        <div class="nav-links" id="navLinks">
-
-            <a href="index.html" class="active">
-                Home
-            </a>
-
-            <a href="products.html">
-                Menu
-            </a>
-
-            <a href="restaurants.html">
-                Restaurants
-            </a>
-
-            <a href="food-match.html">
-                Food match
-            </a>
-
-            <a href="orders.html">
-                My Orders
-            </a>
-
-            <a href="favorites.html">
-    <i class="fa-solid fa-heart"></i>
-    Favorites
-</a>
-
+          <a href="signup.html" class="signup-btn"> Sign Up </a>
         </div>
 
+        <!-- LOGGED IN USER -->
 
-        <!-- RIGHT SIDE -->
+        <div id="userArea" class="user-area hidden">
+          <i class="fa-solid fa-circle-user"></i>
 
-        <div class="nav-right">
+          <span id="userName"> User </span>
 
-            <!-- CART ICON -->
-
-            <a href="cart.html" class="cart-btn" title="Cart">
-
-                <i class="fa-solid fa-cart-shopping"></i>
-
-                <span class="cart-count">
-                    0
-                </span>
-
-            </a>
-
-
-            <!-- LOGIN / SIGN UP -->
-
-            <div id="authArea" class="auth-area">
-
-                <a href="login.html" class="login-link">
-                    Login
-                </a>
-
-                <a href="signup.html" class="signup-btn">
-                    Sign Up
-                </a>
-
-            </div>
-
-
-            <!-- LOGGED IN USER -->
-
-            <div id="userArea" class="user-area hidden">
-
-                <i class="fa-solid fa-circle-user"></i>
-
-                <span id="userName">
-                    User
-                </span>
-
-                <button id="logoutBtn" class="logout-btn">
-                    Logout
-                </button>
-
-            </div>
-
-
-            <!-- MOBILE MENU -->
-
-            <button
-                class="menu-btn"
-                id="menuBtn"
-                type="button"
-            >
-
-                <i class="fa-solid fa-bars"></i>
-
-            </button>
-
+          <button id="logoutBtn" class="logout-btn">Logout</button>
         </div>
 
+        <!-- MOBILE MENU -->
+
+        <button class="menu-btn" id="menuBtn" type="button">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
     </nav>
-
-
 
     <!-- ================= FIRST HERO ================= -->
 
     <section class="hero">
+      <div class="hero-container">
+        <!-- ================= LEFT SIDE ================= -->
 
-        <div class="hero-container">
+        <div class="hero-content">
+          <p class="hero-small-text">
+            <span></span>
 
+            Order food anytime, anywhere
+          </p>
 
-            <!-- ================= LEFT SIDE ================= -->
+          <h1>
+            Feast Your Senses,
 
-            <div class="hero-content">
+            <strong> Fast and Fresh </strong>
+          </h1>
 
-                <p class="hero-small-text">
+          <p class="hero-description">
+            Indulge in your favorite meals from the best restaurants around you.
+            Fresh food, fast delivery and delicious moments delivered right to
+            your door.
+          </p>
 
-                    <span></span>
+          <!-- ================= SEARCH ================= -->
 
-                    Order food anytime, anywhere
+          <!-- ================= CTA ================= -->
 
-                </p>
+          <div class="hero-actions">
+            <a href="orders.html" class="order-btn">
+              Order Now
 
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
 
-                <h1>
+        <!-- ================= RIGHT SIDE ================= -->
 
-                    Feast Your Senses,
-
-                    <strong>
-                        Fast and Fresh
-                    </strong>
-
-                </h1>
-
-
-                <p class="hero-description">
-
-                    Indulge in your favorite meals from the best restaurants
-                    around you. Fresh food, fast delivery and delicious
-                    moments delivered right to your door.
-
-                </p>
-
-
-                <!-- ================= SEARCH ================= -->
-
-                
-
-
-                <!-- ================= CTA ================= -->
-
-                <div class="hero-actions">
-
-                    <a href="orders.html" class="order-btn">
-
-                        Order Now
-
-                        <i class="fa-solid fa-arrow-right"></i>
-
-                    </a>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- ================= RIGHT SIDE ================= -->
-
-            <!--
+        <!--
                 This is returned to your original
                 image section.
             -->
 
-            <div class="hero-image-area">
-
-                <div class="hero-image-wrapper">
-
-                    <img
-                        src="assets/hero-visual.jpg"
-                        alt="Woman enjoying food"
-                        class="hero-main-image"
-                    >
-
-                </div>
-
-            </div>
-
-
+        <div class="hero-image-area">
+          <div class="hero-image-wrapper">
+            <img
+              src="assets/hero-visual.jpg"
+              alt="Woman enjoying food"
+              class="hero-main-image"
+            />
+          </div>
         </div>
-
+      </div>
     </section>
 
     <!-- ================= EXCLUSIVE DEALS ================= -->
-<section class="exclusive-deals">
-
-    <div class="deals-heading">
+    <section class="exclusive-deals">
+      <div class="deals-heading">
         <div>
-            <span class="deal-offer">10%â€“40% OFF</span>
-            <h2>Order our exclusive deals</h2>
+          <span class="deal-offer">10%-40% OFF</span>
+          <h2>Order our exclusive deals</h2>
         </div>
 
         <a href="products.html" class="see-all">
-            See all
-            <i class="fa-solid fa-arrow-right"></i>
+          See all
+          <i class="fa-solid fa-arrow-right"></i>
         </a>
-    </div>
+      </div>
 
-
-    <div class="deals-container">
-
+      <div class="deals-container">
         <!-- Deal 1 -->
         <div class="deal-card">
-            <img src="assets/deal1.jpg" alt="Exclusive food deal">
+          <img src="assets/deal1.jpg" alt="Exclusive food deal" />
 
-            <div class="deal-content">
-                <span class="discount-badge">20% OFF</span>
+          <div class="deal-content">
+            <span class="discount-badge">40% OFF</span>
 
-                <h3>Delicious Meals</h3>
+            <h3>Delicious Meals</h3>
 
-                <p>
-                    Enjoy delicious meals at an amazing discounted price.
-                </p>
+            <p>Enjoy delicious meals at an amazing discounted price.</p>
 
-                <a href="products.html" class="deal-btn">
-                    Order Now
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-            </div>
+            <a href="products.html" class="deal-btn">
+              Order Now
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
-
 
         <!-- Deal 2 -->
         <div class="deal-card">
-            <img src="assets/deal2.jpg" alt="Exclusive food deal">
+          <img src="assets/deal2.jpg" alt="Exclusive food deal" />
 
-            <div class="deal-content">
-                <span class="discount-badge">30% OFF</span>
+          <div class="deal-content">
+            <span class="discount-badge">20% OFF</span>
 
-                <h3>Special Food Deal</h3>
+            <h3>Special Food Deal</h3>
 
-                <p>
-                    Get your favourite meals delivered fresh and fast.
-                </p>
+            <p>Get your favourite meals delivered fresh and fast.</p>
 
-                <a href="products.html" class="deal-btn">
-                    Order Now
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-            </div>
+            <a href="products.html" class="deal-btn">
+              Order Now
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
-
 
         <!-- Deal 3 -->
         <div class="deal-card">
-            <img src="assets/deal3.jpg" alt="Exclusive food deal">
+          <img src="assets/deal3.jpg" alt="Exclusive food deal" />
 
-            <div class="deal-content">
-                <span class="discount-badge">40% OFF</span>
+          <div class="deal-content">
+            <span class="discount-badge">17% OFF</span>
 
-                <h3>Food For Less</h3>
+            <h3>Food For Less</h3>
 
-                <p>
-                    Grab our exclusive offer and enjoy more for less.
-                </p>
+            <p>Grab our exclusive offer and enjoy more for less.</p>
 
-                <a href="products.html" class="deal-btn">
-                    Order Now
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-            </div>
+            <a href="products.html" class="deal-btn">
+              Order Now
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
+      </div>
+    </section>
 
-    </div>
-
-</section>
-
-
-<!-- ================= POPULAR CATEGORIES ================= -->
-<section class="popular-categories">
-
-    <div class="categories-heading">
+    <!-- ================= POPULAR CATEGORIES ================= -->
+    <section class="popular-categories">
+      <div class="categories-heading">
         <div>
-            <span>Explore our menu</span>
-            <h2>Order our Popular Categories</h2>
+          <span>Explore our menu</span>
+          <h2>Order our Popular Categories</h2>
         </div>
 
         <a href="products.html" class="see-all">
-            See all
-            <i class="fa-solid fa-arrow-right"></i>
+          See all
+          <i class="fa-solid fa-arrow-right"></i>
         </a>
-    </div>
+      </div>
 
-
-    <div class="categories-container">
-
+      <div class="categories-container">
         <!-- Category 1 -->
         <a href="products.html?category=burger" class="category-card">
-            <div class="category-image">
-                <img src="assets/cat1.jpg" alt="Burgers">
-            </div>
+          <div class="category-image">
+            <img src="assets/cat1.jpg" alt="Burgers" />
+          </div>
 
-            <h3>Burgers</h3>
+          <h3>Burgers</h3>
         </a>
-
 
         <!-- Category 2 -->
         <a href="products.html?category=pizza" class="category-card">
-            <div class="category-image">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuKroPu3fwC_-wcQ2EfuAdqRANxlts-GJZBKQqNrh3TA&s=10" alt="Rice">
-            </div>
+          <div class="category-image">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuKroPu3fwC_-wcQ2EfuAdqRANxlts-GJZBKQqNrh3TA&s=10"
+              alt="Rice"
+            />
+          </div>
 
-            <h3>Rice</h3>
+          <h3>Rice</h3>
         </a>
-
 
         <!-- Category 3 -->
         <a href="products.html?category=chicken" class="category-card">
-            <div class="category-image">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnsQBBRVpnHh-kPNaTtJ5oLorgLvFi6wOr62D60XIyhg&s=10" alt="Chicken">
-            </div>
+          <div class="category-image">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnsQBBRVpnHh-kPNaTtJ5oLorgLvFi6wOr62D60XIyhg&s=10"
+              alt="Chicken"
+            />
+          </div>
 
-            <h3>Chicken</h3>
+          <h3>Chicken</h3>
         </a>
-
 
         <!-- Category 4 -->
         <a href="products.html?category=rice" class="category-card">
-            <div class="category-image">
-                <img src="assets/cat4.jpg" alt="Pizza">
-            </div>
+          <div class="category-image">
+            <img src="assets/cat4.jpg" alt="Pizza" />
+          </div>
 
-            <h3>Pizza</h3>
+          <h3>Pizza</h3>
         </a>
-
 
         <!-- Category 5 -->
         <a href="products.html?category=shawarma" class="category-card">
-            <div class="category-image">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJRV9CoDC2TU3FR279xisZE3of_dPVcKZFN79tzM4Uhw&s=10" alt="Shawarma">
-            </div>
+          <div class="category-image">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJRV9CoDC2TU3FR279xisZE3of_dPVcKZFN79tzM4Uhw&s=10"
+              alt="Shawarma"
+            />
+          </div>
 
-            <h3>Shawarma</h3>
+          <h3>Shawarma</h3>
         </a>
-
 
         <!-- Category 6 -->
         <a href="products.html?category=drinks" class="category-card">
-            <div class="category-image">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoEnmTyf1tt0dazhGGf3S6njvUS_3uF4REYdZpwuRA5g&s=10" alt="Drinks">
-            </div>
+          <div class="category-image">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoEnmTyf1tt0dazhGGf3S6njvUS_3uF4REYdZpwuRA5g&s=10"
+              alt="Drinks"
+            />
+          </div>
 
-            <h3>Drinks</h3>
+          <h3>Drinks</h3>
         </a>
+      </div>
+    </section>
 
-    </div>
-
-</section>
-
-<!-- ================= POPULAR RESTAURANTS ================= -->
-<section class="popular-restaurants">
-
-    <div class="restaurants-heading">
+    <!-- ================= POPULAR RESTAURANTS ================= -->
+    <section class="popular-restaurants">
+      <div class="restaurants-heading">
         <div>
-            <span>Discover great food</span>
-            <h2>Popular Restaurants in Nigeria</h2>
+          <span>Discover great food</span>
+          <h2>Popular Restaurants in Nigeria</h2>
         </div>
 
         <a href="restaurants.html" class="see-all">
-            See all
-            <i class="fa-solid fa-arrow-right"></i>
+          See all
+          <i class="fa-solid fa-arrow-right"></i>
         </a>
-    </div>
+      </div>
 
-    <!-- JavaScript will generate the restaurants here -->
-    <div class="restaurants-container" id="restaurantsContainer"></div>
+      <!-- JavaScript will generate the restaurants here -->
+      <div class="restaurants-container" id="restaurantsContainer"></div>
+    </section>
 
-</section>
+    <!-- ================= ROCKYDELISH PROMOTION ================= -->
+    <section class="rockydelish-promotion">
+      <div class="promotion-content">
+        <span class="promotion-label"> Your favourite food, your way </span>
 
-<!-- ================= ROCKYDELISH PROMOTION ================= -->
-<section class="rockydelish-promotion">
-
-    <div class="promotion-content">
-
-        <span class="promotion-label">
-            Your favourite food, your way
-        </span>
-
-        <h2>
-            Delicious food is just a few clicks away.
-        </h2>
+        <h2>Delicious food is just a few clicks away.</h2>
 
         <p>
-            Explore popular Nigerian restaurants, discover delicious meals,
-            and order your favourites from RockyDelish.
+          Explore popular Nigerian restaurants, discover delicious meals, and
+          order your favourites from RockyDelish.
         </p>
 
-        <p>
-            Fresh food. Great restaurants. Simple ordering.
-        </p>
+        <p>Fresh food. Great restaurants. Simple ordering.</p>
 
         <button class="promotion-btn" id="promotionOrderBtn">
-            Explore Food
-            <i class="fa-solid fa-arrow-right"></i>
+          Explore Food
+          <i class="fa-solid fa-arrow-right"></i>
         </button>
+      </div>
 
-    </div>
-
-
-    <div class="promotion-visual">
-
+      <div class="promotion-visual">
         <div class="visual-circle"></div>
 
         <div class="food-icon food-icon-one">
-            <i class="fa-solid fa-burger"></i>
+          <i class="fa-solid fa-burger"></i>
         </div>
 
         <div class="food-icon food-icon-two">
-            <i class="fa-solid fa-pizza-slice"></i>
+          <i class="fa-solid fa-pizza-slice"></i>
         </div>
 
         <div class="food-icon food-icon-three">
-            <i class="fa-solid fa-drumstick-bite"></i>
+          <i class="fa-solid fa-drumstick-bite"></i>
         </div>
 
         <div class="promotion-text">
-            <span>Rocky</span>
-            <strong>Delish</strong>
+          <span>Rocky</span>
+          <strong>Delish</strong>
         </div>
+      </div>
+    </section>
 
-    </div>
-
-</section>
-
-<!-- ================= PARTNER & RIDER ================= -->
-<section class="partner-rider-section">
-
-    <!-- ================= PARTNER WITH US ================= -->
-    <div class="promo-card">
-
+    <!-- ================= PARTNER & RIDER ================= -->
+    <section class="partner-rider-section">
+      <!-- ================= PARTNER WITH US ================= -->
+      <div class="promo-card">
         <!-- Text -->
         <div class="promo-content">
+          <span class="promo-label"> Earn more with RockyDelish </span>
 
-            <span class="promo-label">
-                Earn more with RockyDelish
-            </span>
+          <h2>
+            Partner<br />
+            with us
+          </h2>
 
-            <h2>
-                Partner<br>
-                with us
-            </h2>
+          <p>
+            Grow your restaurant and reach more customers by partnering with
+            RockyDelish.
+          </p>
 
-            <p>
-                Grow your restaurant and reach more
-                customers by partnering with RockyDelish.
-            </p>
-
-            <a href="#" class="promo-button">
-                Partner with us
-                <i class="fa-solid fa-arrow-right"></i>
-            </a>
-
+          <a href="#" class="promo-button">
+            Partner with us
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
         </div>
-
 
         <!-- Visual -->
         <div class="promo-visual">
+          <div class="visual-circle circle-one"></div>
+          <div class="visual-circle circle-two"></div>
 
-            <div class="visual-circle circle-one"></div>
-            <div class="visual-circle circle-two"></div>
+          <div class="restaurant-building">
+            <i class="fa-solid fa-store"></i>
+          </div>
 
-            <div class="restaurant-building">
-                <i class="fa-solid fa-store"></i>
-            </div>
+          <div class="food-icon burger-icon">
+            <i class="fa-solid fa-burger"></i>
+          </div>
 
-            <div class="food-icon burger-icon">
-                <i class="fa-solid fa-burger"></i>
-            </div>
-
-            <!-- <div class="food-icon pizza-icon">
+          <!-- <div class="food-icon pizza-icon">
                 <i class="fa-solid fa-pizza-slice"></i>
             </div> -->
 
-            <div class="food-icon chicken-icon">
-                <i class="fa-solid fa-drumstick-bite"></i>
-            </div>
+          <div class="food-icon chicken-icon">
+            <i class="fa-solid fa-drumstick-bite"></i>
+          </div>
 
+          <!-- Floating information -->
+          <div class="floating-info earn-info">
+            <strong>Earn more</strong>
 
-            <!-- Floating information -->
-            <div class="floating-info earn-info">
-
-                <strong>Earn more</strong>
-
-                <span>
-                    with lower fees
-                </span>
-
-            </div>
-
+            <span> with lower fees </span>
+          </div>
         </div>
+      </div>
 
-    </div>
-
-
-    <!-- ================= RIDE WITH US ================= -->
-    <div class="promo-card">
-
+      <!-- ================= RIDE WITH US ================= -->
+      <div class="promo-card">
         <!-- Text -->
         <div class="promo-content">
+          <span class="promo-label"> Become a RockyDelish rider </span>
 
-            <span class="promo-label">
-                Become a RockyDelish rider
-            </span>
+          <h2>
+            Ride<br />
+            with us
+          </h2>
 
-            <h2>
-                Ride<br>
-                with us
-            </h2>
+          <p>
+            Deliver delicious meals to customers and earn while working with us.
+          </p>
 
-            <p>
-                Deliver delicious meals to customers
-                and earn while working with us.
-            </p>
-
-            <a href="#" class="promo-button">
-                Ride with us
-                <i class="fa-solid fa-arrow-right"></i>
-            </a>
-
+          <a href="#" class="promo-button">
+            Ride with us
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
         </div>
-
 
         <!-- Visual -->
         <div class="promo-visual rider-visual">
+          <div class="visual-circle circle-one"></div>
+          <div class="visual-circle circle-two"></div>
 
-            <div class="visual-circle circle-one"></div>
-            <div class="visual-circle circle-two"></div>
+          <div class="rider-icon">
+            <i class="fa-solid fa-motorcycle"></i>
+          </div>
 
-            <div class="rider-icon">
-                <i class="fa-solid fa-motorcycle"></i>
-            </div>
+          <div class="delivery-box">
+            <i class="fa-solid fa-box"></i>
+          </div>
 
-            <div class="delivery-box">
-                <i class="fa-solid fa-box"></i>
-            </div>
+          <div class="food-icon rider-food-one">
+            <i class="fa-solid fa-burger"></i>
+          </div>
 
-            <div class="food-icon rider-food-one">
-                <i class="fa-solid fa-burger"></i>
-            </div>
-
-            <!-- <div class="food-icon rider-food-two">
+          <!-- <div class="food-icon rider-food-two">
                 <i class="fa-solid fa-pizza-slice"></i>
             </div> -->
 
+          <!-- Floating information -->
+          <div class="floating-info perks-info">
+            <strong>Exclusive perks</strong>
 
-            <!-- Floating information -->
-            <div class="floating-info perks-info">
-
-                <strong>Exclusive perks</strong>
-
-                <span>
-                    for our riders
-                </span>
-
-            </div>
-
+            <span> for our riders </span>
+          </div>
         </div>
+      </div>
+    </section>
 
-    </div>
-
-</section>
-
-<!-- ================= HOW FOOD ORDER WORKS ================= -->
-<section class="how-order-section">
-
-    <div class="how-order-heading">
+    <!-- ================= HOW FOOD ORDER WORKS ================= -->
+    <section class="how-order-section">
+      <div class="how-order-heading">
         <span>Simple & easy</span>
 
-        <h2>
-            How our food order work?
-        </h2>
+        <h2>How our food order work?</h2>
 
         <p>
-            Ordering your favourite food from RockyDelish
-            is quick, simple and convenient.
+          Ordering your favourite food from RockyDelish is quick, simple and
+          convenient.
         </p>
-    </div>
+      </div>
 
-
-    <div class="order-steps">
-
+      <div class="order-steps">
         <!-- STEP 1 -->
         <div class="order-step">
+          <div class="step-number">01</div>
 
-            <div class="step-number">
-                01
-            </div>
+          <div class="step-icon">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
 
-            <div class="step-icon">
-                <i class="fa-solid fa-location-dot"></i>
-            </div>
+          <h3>Choose your location</h3>
 
-            <h3>
-                Choose your location
-            </h3>
-
-            <p>
-                Enter your location and discover
-                restaurants and meals available near you.
-            </p>
-
+          <p>
+            Enter your location and discover restaurants and meals available
+            near you.
+          </p>
         </div>
-
 
         <!-- STEP 2 -->
         <div class="order-step">
+          <div class="step-number">02</div>
 
-            <div class="step-number">
-                02
-            </div>
+          <div class="step-icon">
+            <i class="fa-solid fa-utensils"></i>
+          </div>
 
-            <div class="step-icon">
-                <i class="fa-solid fa-utensils"></i>
-            </div>
+          <h3>Choose your food</h3>
 
-            <h3>
-                Choose your food
-            </h3>
-
-            <p>
-                Browse different restaurants, explore
-                the menu and select your favourite meal.
-            </p>
-
+          <p>
+            Browse different restaurants, explore the menu and select your
+            favourite meal.
+          </p>
         </div>
-
 
         <!-- STEP 3 -->
         <div class="order-step">
+          <div class="step-number">03</div>
 
-            <div class="step-number">
-                03
-            </div>
+          <div class="step-icon">
+            <i class="fa-solid fa-motorcycle"></i>
+          </div>
 
-            <div class="step-icon">
-                <i class="fa-solid fa-motorcycle"></i>
-            </div>
+          <h3>Get your food</h3>
 
-            <h3>
-                Get your food
-            </h3>
-
-            <p>
-                Place your order and wait while
-                your delicious food is delivered to you.
-            </p>
-
+          <p>
+            Place your order and wait while your delicious food is delivered to
+            you.
+          </p>
         </div>
-
-    </div>
-
-</section>
-<!-- ================= ROCKYDELISH STATS ================= -->
-<section class="rockydelish-stats">
-
-    <div class="stat-item">
+      </div>
+    </section>
+    <!-- ================= ROCKYDELISH STATS ================= -->
+    <section class="rockydelish-stats">
+      <div class="stat-item">
         <h2 class="stat-number" data-target="500">0</h2>
         <p>Restaurants</p>
-    </div>
+      </div>
 
-    <div class="stat-item">
+      <div class="stat-item">
         <h2 class="stat-number" data-target="10000">0</h2>
         <p>Happy Customers</p>
-    </div>
+      </div>
 
-    <div class="stat-item">
+      <div class="stat-item">
         <h2 class="stat-number" data-target="15000">0</h2>
         <p>Orders Delivered</p>
-    </div>
+      </div>
 
-    <div class="stat-item">
+      <div class="stat-item">
         <h2 class="stat-number" data-target="100">0</h2>
         <p>Delivery Riders</p>
-    </div>
+      </div>
+    </section>
 
-</section>
-
-<!-- ================= FOOTER ================= -->
-<footer class="rockydelish-footer">
-
-    <div class="footer-container">
-
+    <!-- ================= FOOTER ================= -->
+    <footer class="rockydelish-footer">
+      <div class="footer-container">
         <!-- BRAND -->
         <div class="footer-brand">
+          <a href="index.html" class="footer-logo">
+            Rocky<span>Delish</span>
+          </a>
 
-            <a href="index.html" class="footer-logo">
-                Rocky<span>Delish</span>
+          <p>
+            Delicious food from your favourite restaurants, delivered fresh and
+            fast to your door.
+          </p>
+
+          <div class="footer-socials">
+            <a href="#" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
             </a>
 
-            <p>
-                Delicious food from your favourite restaurants,
-                delivered fresh and fast to your door.
-            </p>
+            <a href="#" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
 
-            <div class="footer-socials">
+            <a href="#" aria-label="Twitter">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
 
-                <a href="#" aria-label="Facebook">
-                    <i class="fa-brands fa-facebook-f"></i>
-                </a>
-
-                <a href="#" aria-label="Instagram">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-
-                <a href="#" aria-label="Twitter">
-                    <i class="fa-brands fa-x-twitter"></i>
-                </a>
-
-                <a href="#" aria-label="TikTok">
-                    <i class="fa-brands fa-tiktok"></i>
-                </a>
-
-            </div>
-
+            <a href="#" aria-label="TikTok">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+          </div>
         </div>
-
 
         <!-- QUICK LINKS -->
         <div class="footer-column">
+          <h3>Quick Links</h3>
 
-            <h3>Quick Links</h3>
-
-            <a href="index.html">Home</a>
-            <a href="restaurants.html">Restaurants</a>
-            <a href="products.html">Menu</a>
-             <a href="food-match.html">
-                Food Match
-            </a>
-            <a href="favorites.html">
-    Favorites
-</a>
-            <a href="cart.html">Cart</a>
-
+          <a href="index.html">Home</a>
+          <a href="restaurants.html">Restaurants</a>
+          <a href="products.html">Menu</a>
+          <a href="food-match.html"> Food Match </a>
+          <a href="favorites.html"> Favorites </a>
+          <a href="cart.html">Cart</a>
         </div>
-
 
         <!-- CUSTOMER -->
         <div class="footer-column">
+          <h3>Customer</h3>
 
-            <h3>Customer</h3>
-
-            <a href="login.html">Login</a>
-            <a href="signup.html">Sign Up</a>
-            <a href="cart.html">My Orders</a>
-            <a href="#">Contact Us</a>
-
+          <a href="login.html">Login</a>
+          <a href="signup.html">Sign Up</a>
+          <a href="cart.html">My Orders</a>
+          <a href="#">Contact Us</a>
         </div>
-
 
         <!-- CONTACT -->
         <div class="footer-column footer-contact">
+          <h3>Contact Us</h3>
 
-            <h3>Contact Us</h3>
+          <p>
+            <i class="fa-solid fa-location-dot"></i>
+            Oyo, Nigeria
+          </p>
 
-            <p>
-                <i class="fa-solid fa-location-dot"></i>
-                Oyo, Nigeria
-            </p>
+          <p>
+            <i class="fa-solid fa-phone"></i>
+            +234 7070992944
+          </p>
 
-            <p>
-                <i class="fa-solid fa-phone"></i>
-                +234 7070992944
-            </p>
-
-            <p>
-                <i class="fa-solid fa-envelope"></i>
-                rockydelish@gmail.com
-            </p>
-
+          <p>
+            <i class="fa-solid fa-envelope"></i>
+            rockydelish@gmail.com
+          </p>
         </div>
+      </div>
 
-    </div>
+      <!-- FOOTER BOTTOM -->
 
-
-    <!-- FOOTER BOTTOM -->
-
-    <div class="footer-bottom">
-
-        <p>
-            © 2026 RockyDelish. All rights reserved.
-        </p>
+      <div class="footer-bottom">
+        <p>© 2026 RockyDelish. All rights reserved.</p>
 
         <div class="footer-bottom-links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms & Conditions</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
         </div>
-
-    </div>
-
-</footer>
-
-
-
+      </div>
+    </footer>
 
     <!-- SWEETALERT -->
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
 
     <!-- JAVASCRIPT -->
 
     <script type="module" src="index.js"></script>
 
     <script src="motion.js" defer></script>
-</body>
-
+  </body>
 </html>
-
